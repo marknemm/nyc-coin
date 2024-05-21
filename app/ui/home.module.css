@@ -1,0 +1,260 @@
+.section {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  padding: 0 100px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @media only screen and (max-width: 600px) {
+    padding: 0 20px;
+  }
+}
+
+.first {
+  background-image: url('/Home_Background.svg');
+
+  .nycImageContainer,
+  .gothamImageContainer,
+  .interboroImageContainer {
+    position: relative;
+    width: 80%;
+  }
+
+  .nycImageContainer {
+    padding-top: 35%;
+  }
+
+  .gothamImageContainer,
+  .interboroImageContainer {
+    padding-top: 8%;
+  }
+
+  @media only screen and (max-width: 600px) {
+    padding: 0;
+
+    .nycImageContainer,
+    .gothamImageContainer,
+    .interboroImageContainer {
+      width: 90%;
+    }
+  }
+}
+
+.second {
+  align-items: flex-end;
+  background-image: url('/FAM_Background.svg');
+
+  .textContent {
+    text-transform: uppercase;
+    width: 35vw;
+
+    .title {
+      font-size: clamp(1.5em, 6vw, 3.5em);
+      line-height: 100%;
+      margin-bottom: 1em;
+    }
+
+    .description {
+      font-size: clamp(1em, 1.5vw, 1.5em);
+      line-height: 130%;
+
+      & > p {
+        margin-bottom: 2vw;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    align-items: center;
+
+    .textContent {
+      width: 100%;
+
+      .title {
+        line-height: 130%;
+      }
+    }
+  }
+}
+
+.first,
+.second {
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(228, 78, 45, 0.25);
+  }
+}
+
+.third {
+  display: block;
+  padding: 0;
+
+  .left {
+    position: relative;
+    box-sizing: border-box;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5%;
+    vertical-align: top;
+    width: 40%;
+    height: 100%;
+    background: rgb(31, 72, 199);
+
+    .description {
+      font-size: clamp(1em, 1.3vw, 1.5em);
+      line-height: 130%;
+
+      & > p {
+        margin-bottom: 1.5vw;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .right {
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    width: 59%;
+    height: 100%;
+    background-image: url('/StreetBy_Background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .left {
+      width: 100%;
+      height: auto;
+      padding: 40px 20px;
+
+      .description > p {
+        margin-bottom: 20px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .right {
+      display: none;
+    }
+  }
+}
+
+.fourth {
+  background-image: url('/FirstTime_Background.png');
+}
+
+.fifth {
+  background-color: rgb(228, 78, 45);
+  height: 40vh;
+  font-size: clamp(1em, 1.5vw, 1.5em);
+  line-height: 130%;
+}
+
+.sixth {
+  background-image: url('/Overlay.svg');
+}
+
+.seventh {
+  display: block;
+  padding: 0;
+  background-image: url('/Bottom_Background.png');
+
+  .left {
+    background-image: url('/NYC_Logo_Stack.png');
+    background-size: contain;
+    background-repeat: repeat-y;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    box-sizing: border-box;
+    width: 35%;
+    height: 100%;
+    left: -5%;
+  }
+
+  .right {
+    position: relative;
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: flex-end;
+    padding-bottom: 10vh;
+    width: 64%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .textBlocks {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      font-size: clamp(1em, 1.5vw, 1.5em);
+
+      & > div {
+        padding: 0 5%;
+
+        & > p {
+          margin-bottom: 1.5vw;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .left {
+      display: none;
+    }
+
+    .right {
+      align-items: center;
+
+      .textBlocks {
+        flex-direction: column;
+        align-items: center;
+
+        & > div {
+          padding: 0 20px;
+          margin-bottom: 20px;
+
+          & > p {
+            margin-bottom: 20px;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
