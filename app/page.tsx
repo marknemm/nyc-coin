@@ -1,5 +1,6 @@
-import Image from "next/image";
+import Header from '@/app/ui/header/header';
 import styles from '@/app/ui/home.module.css';
+import Image from "next/image";
 
 /**
  * The {@link Home} page component.
