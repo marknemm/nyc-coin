@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
       <div className={`${styles.section} ${styles.first}`}>
-        <div className={styles.nycImageContainer}>
+        <div className={styles.nycContainer}>
           <Image
             src="/$NYC_Logo.png"
             alt="$NYC Logo"
@@ -16,7 +16,7 @@ export default function Home() {
           />
         </div>
 
-        <div className={styles.gothamImageContainer}>
+        <div className={styles.gothamContainer}>
           <Image
             src="/Sol_Of_Gotham.png"
             alt="$NYC Logo"
@@ -26,7 +26,7 @@ export default function Home() {
           />
         </div>
 
-        <div className={styles.interboroImageContainer}>
+        <div className={styles.interboroContainer}>
           <Image
             src="/Interboro_Currency.svg"
             alt="$NYC Logo"

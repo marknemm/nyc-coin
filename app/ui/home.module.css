@@ -20,28 +20,28 @@
 .first {
   background-image: url('/Home_Background.svg');
 
-  .nycImageContainer,
-  .gothamImageContainer,
-  .interboroImageContainer {
+  .nycContainer,
+  .gothamContainer,
+  .interboroContainer {
     position: relative;
     width: 80%;
   }
 
-  .nycImageContainer {
+  .nycContainer {
     padding-top: 35%;
   }
 
-  .gothamImageContainer,
-  .interboroImageContainer {
+  .gothamContainer,
+  .interboroContainer {
     padding-top: 8%;
   }
 
   @media only screen and (max-width: 600px) {
     padding: 0;
 
-    .nycImageContainer,
-    .gothamImageContainer,
-    .interboroImageContainer {
+    .nycContainer,
+    .gothamContainer,
+    .interboroContainer {
       width: 90%;
     }
   }
