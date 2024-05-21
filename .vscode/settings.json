@@ -1,0 +1,6 @@
+{
+  "cssModules.camelCase": true,
+  "cssModules.pathAlias": {
+    "@": "${workspaceFolder}"
+  }
+}

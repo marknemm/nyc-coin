@@ -5,73 +5,81 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100vw;
-  height: 100vh;
-  padding: 0 100px;
+  width: 100dvw;
+  height: 100dvh;
+  padding: 0 70px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
-  @media only screen and (max-width: 600px) {
+  .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  & :global(p) {
+    margin-bottom: 1.5dvw;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @media only screen and (max-width: 767px) {
     padding: 0 20px;
   }
 }
 
 .first {
-  background-image: url('/Home_Background.svg');
+  padding: 0;
 
   .nycContainer,
   .gothamContainer,
   .interboroContainer {
     position: relative;
-    width: 80%;
+    box-sizing: border-box;
+    width: 90%;
   }
 
   .nycContainer {
-    padding-top: 35%;
+    padding-top: 40%;
+    margin-bottom: -7%;
   }
 
-  .gothamContainer,
+  .gothamContainer {
+    padding-top: 6.25%;
+    margin-bottom: 1.3%;
+  }
+
   .interboroContainer {
-    padding-top: 8%;
-  }
-
-  @media only screen and (max-width: 600px) {
-    padding: 0;
-
-    .nycContainer,
-    .gothamContainer,
-    .interboroContainer {
-      width: 90%;
-    }
+    padding-top: 1.4%;
   }
 }
 
 .second {
   align-items: flex-end;
-  background-image: url('/FAM_Background.svg');
 
   .textContent {
+    position: relative;
     text-transform: uppercase;
-    width: 35vw;
+    width: 35dvw;
 
     .title {
-      font-size: clamp(1.5em, 6vw, 3.5em);
+      font-size: clamp(1.5em, 6dvw, 3.5em);
       line-height: 100%;
       margin-bottom: 1em;
     }
 
     .description {
-      font-size: clamp(1em, 1.5vw, 1.5em);
+      font-size: clamp(1em, 1.5dvw, 1.5em);
       line-height: 130%;
-
-      & > p {
-        margin-bottom: 2vw;
-      }
     }
   }
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 767px) {
     align-items: center;
 
     .textContent {
@@ -101,46 +109,21 @@
   display: block;
   padding: 0;
 
-  .left {
+  .description {
     position: relative;
     box-sizing: border-box;
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
     padding: 0 5%;
-    vertical-align: top;
-    width: 40%;
+    width: 50%;
     height: 100%;
-    background: rgb(31, 72, 199);
-
-    .description {
-      font-size: clamp(1em, 1.3vw, 1.5em);
-      line-height: 130%;
-
-      & > p {
-        margin-bottom: 1.5vw;
-
-        &:last-child {
-          margin-bottom: 0;
-        }
-      }
-    }
+    background: #1F48C7;
+    font-size: clamp(1em, 1.3dvw, 1.5em);
+    line-height: 130%;
   }
 
-  .right {
-    display: inline-block;
-    position: relative;
-    box-sizing: border-box;
-    width: 59%;
-    height: 100%;
-    background-image: url('/StreetBy_Background.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 767px) {
     .left {
       width: 100%;
       height: auto;
@@ -154,105 +137,52 @@
         }
       }
     }
-
-    .right {
-      display: none;
-    }
   }
 }
 
 .fourth {
-  background-image: url('/FirstTime_Background.png');
 }
 
 .fifth {
   background-color: rgb(228, 78, 45);
-  height: 40vh;
-  font-size: clamp(1em, 1.5vw, 1.5em);
+  height: 40dvh;
+  font-size: clamp(1em, 1.5dvw, 1.5em);
   line-height: 130%;
 }
 
 .sixth {
-  background-image: url('/Overlay.svg');
 }
 
 .seventh {
   display: block;
   padding: 0;
-  background-image: url('/Bottom_Background.png');
 
-  .left {
-    background-image: url('/NYC_Logo_Stack.png');
-    background-size: contain;
-    background-repeat: repeat-y;
-    display: inline-block;
-    vertical-align: top;
-    position: relative;
+  .textBlocks {
+    position: absolute;
     box-sizing: border-box;
-    width: 35%;
-    height: 100%;
-    left: -5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    left: 40%;
+    bottom: 100px;
+    font-size: clamp(1em, 1.2dvw, 1.5em);
+
+    & > div {
+      padding: 0 5%;
+    }
   }
 
-  .right {
-    position: relative;
-    box-sizing: border-box;
-    display: inline-flex;
-    align-items: flex-end;
-    padding-bottom: 10vh;
-    width: 64%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
+  @media only screen and (max-width: 767px) {
     .textBlocks {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      font-size: clamp(1em, 1.5vw, 1.5em);
-
-      & > div {
-        padding: 0 5%;
-
-        & > p {
-          margin-bottom: 1.5vw;
-
-          &:last-child {
-            margin-bottom: 0;
-          }
-        }
-      }
-    }
-  }
-
-  @media only screen and (max-width: 600px) {
-    .left {
-      display: none;
-    }
-
-    .right {
+      flex-direction: column;
       align-items: center;
 
-      .textBlocks {
-        flex-direction: column;
-        align-items: center;
+      & > div {
+        padding: 0 20px;
+        margin-bottom: 20px;
 
-        & > div {
-          padding: 0 20px;
-          margin-bottom: 20px;
-
-          & > p {
-            margin-bottom: 20px;
-
-            &:last-child {
-              margin-bottom: 0;
-            }
-          }
-
-          &:last-child {
-            margin-bottom: 0;
-          }
+        &:last-child {
+          margin-bottom: 0;
         }
       }
     }
