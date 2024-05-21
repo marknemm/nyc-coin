@@ -2,5 +2,11 @@
   "cssModules.camelCase": true,
   "cssModules.pathAlias": {
     "@": "${workspaceFolder}"
+  },
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
+  "files.associations": {
+    "*.css": "tailwindcss"
   }
 }

@@ -12,12 +12,16 @@
   background-position: center;
   background-repeat: no-repeat;
 
-  .background {
+  & > .background {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+
+    & > img {
+      object-fit: cover;
+    }
   }
 
   & :global(p) {
@@ -42,6 +46,10 @@
     position: relative;
     box-sizing: border-box;
     width: 90%;
+
+    & > img {
+      object-fit: contain;
+    }
   }
 
   .nycContainer {
@@ -92,19 +100,6 @@
   }
 }
 
-.first,
-.second {
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(228, 78, 45, 0.25);
-  }
-}
-
 .third {
   display: block;
   padding: 0;
@@ -118,7 +113,7 @@
     padding: 0 5%;
     width: 50%;
     height: 100%;
-    background: #1F48C7;
+    background: var(--section-blue);
     font-size: clamp(1em, 1.3dvw, 1.5em);
     line-height: 130%;
   }
@@ -144,7 +139,7 @@
 }
 
 .fifth {
-  background-color: rgb(228, 78, 45);
+  background-color: var(--section-orange);
   height: 40dvh;
   font-size: clamp(1em, 1.5dvw, 1.5em);
   line-height: 130%;
@@ -157,6 +152,12 @@
   display: block;
   padding: 0;
 
+  .background {
+    & > img {
+      object-position: left center;
+    }
+  }
+
   .textBlocks {
     position: absolute;
     box-sizing: border-box;
@@ -165,7 +166,7 @@
     justify-content: center;
     left: 40%;
     bottom: 100px;
-    font-size: clamp(1em, 1.2dvw, 1.5em);
+    font-size: clamp(1em, 1dvw, 1.5em);
 
     & > div {
       padding: 0 5%;

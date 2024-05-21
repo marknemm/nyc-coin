@@ -2,9 +2,9 @@ import Image from "next/image";
 import styles from '@/app/ui/home.module.css';
 
 /**
- * The Home page component.
+ * The {@link Home} page component.
  *
- * @returns The Home page component JSX.
+ * @returns The {@link Home} page component JSX.
  */
 export default function Home() {
   return (
@@ -14,8 +14,7 @@ export default function Home() {
           <Image
             src="/HERO_BG.png"
             alt=""
-            layout="fill"
-            objectFit="cover"
+            fill
             priority
           />
         </div>
@@ -24,8 +23,7 @@ export default function Home() {
           <Image
             src="/$NYC_Logo.png"
             alt="$NYC Logo"
-            layout="fill"
-            objectFit="contain"
+            fill
             priority
           />
         </div>
@@ -34,8 +32,7 @@ export default function Home() {
           <Image
             src="/Sol_Of_Gotham.png"
             alt="The SOL of Gotham"
-            layout="fill"
-            objectFit="contain"
+            fill
             priority
           />
         </div>
@@ -44,8 +41,7 @@ export default function Home() {
           <Image
             src="/Interboro_Currency.svg"
             alt="The only interboro currency"
-            layout="fill"
-            objectFit="contain"
+            fill
             priority
           />
         </div>
@@ -56,8 +52,7 @@ export default function Home() {
           <Image
             src="/SECTION2_BG.png"
             alt=""
-            layout="fill"
-            objectFit="cover"
+            fill
           />
         </div>
 
@@ -97,8 +92,7 @@ export default function Home() {
           <Image
             src="/SECTION3_BG.png"
             alt=""
-            layout="fill"
-            objectFit="cover"
+            fill
           />
         </div>
 
@@ -137,8 +131,7 @@ export default function Home() {
           <Image
             src="/SECTION4_BG.png"
             alt=""
-            layout="fill"
-            objectFit="cover"
+            fill
           />
         </div>
       </div>
@@ -154,8 +147,7 @@ export default function Home() {
           <Image
             src="/SECTION5_BG.png"
             alt=""
-            layout="fill"
-            objectFit="cover"
+            fill
           />
         </div>
       </div>
@@ -165,9 +157,7 @@ export default function Home() {
           <Image
             src="/SECTION6_BG.png"
             alt=""
-            layout="fill"
-            objectFit="cover"
-            objectPosition="left center"
+            fill
           />
         </div>
 
