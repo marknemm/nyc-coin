@@ -22,6 +22,26 @@
     }
   }
 
+  .sectionStartText {
+    position: absolute;
+    z-index: 1;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    transform: translateY(-52%);
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1350px;
+
+    & > div {
+      padding-top: 25%;
+    }
+  }
+
   & :global(p) {
     margin-bottom: 1em;
 
@@ -116,25 +136,9 @@
     }
   }
 
-  .sectionStartText,
-  .sectionEndText {
-    position: absolute;
-    z-index: 1;
-    box-sizing: border-box;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
   .sectionStartText {
     transform: translateY(-16.5%);
     width: 100%;
-    max-width: 1350px;
-
-    & > div {
-      padding-top: 25%;
-    }
   }
 
   .description {
@@ -149,18 +153,6 @@
     background: var(--section-blue);
     font-size: clamp(1em, 1.3dvw, 1.2em);
     line-height: 130%;
-  }
-
-  .sectionEndText {
-    transform: translateY(-48%);
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1350px;
-
-    & > div {
-      padding-top: 25%;
-    }
   }
 
   @media only screen and (max-width: 991px) {
@@ -179,17 +171,21 @@
   }
 }
 
-.fourth {
-}
-
 .fifth {
   background: var(--section-orange);
-  height: 40vh;
-  font-size: clamp(1em, 1.5dvw, 1.5em);
-  line-height: 130%;
+  height: auto;
+  font-size: clamp(1em, 1.3dvw, 1.2em);
+  line-height: 110%;
+  padding: 0 5.3%;
+  padding-top: calc(max(9vw, 60px));
+  padding-bottom: calc(max(10vw, 72px));
 }
 
 .sixth {
+  .sectionStartText {
+    transform: translateY(-19%);
+    width: 100%;
+  }
 }
 
 .seventh {

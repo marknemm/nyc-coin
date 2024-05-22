@@ -151,16 +151,6 @@ export default function Home() {
             </div>
           </Fade>
         </div>
-
-        <div className={`${styles.sectionEndText}`}>
-          <div>
-            <Image
-              src="/FirstTime.svg"
-              alt="First time"
-              fill
-            />
-          </div>
-        </div>
       </div>
 
       <div className={`${styles.section} ${styles.fourth}`}>
@@ -171,9 +161,29 @@ export default function Home() {
             fill
           />
         </div>
+
+        <div className={`${styles.sectionStartText}`}>
+          <div>
+            <Image
+              src="/FirstTime.svg"
+              alt="First time"
+              fill
+            />
+          </div>
+        </div>
       </div>
 
       <div className={`${styles.section} ${styles.fifth}`}>
+        <div className={`${styles.sectionStartText}`}>
+          <div>
+            <Image
+              src="/LongTime.svg"
+              alt="Long Time."
+              fill
+            />
+          </div>
+        </div>
+
         <Fade triggerOnce>
           <div>
             THE STRUGGLE IS REAL. PROJECTS ARE MESSY. AND WE CONTINUE BECAUSE IT MATTERS TOO MUCH TO US.
@@ -190,6 +200,16 @@ export default function Home() {
             alt=""
             fill
           />
+        </div>
+
+        <div className={`${styles.sectionStartText}`}>
+          <div>
+            <Image
+              src="/SweatTheTech.svg"
+              alt="Sweat the tech."
+              fill
+            />
+          </div>
         </div>
       </div>
 
