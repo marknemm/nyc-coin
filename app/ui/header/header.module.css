@@ -1,4 +1,5 @@
 .header {
+  --padding-top-absolute: 50px;
   --padding-horizontal: 50px;
 
   position: absolute;
@@ -6,13 +7,22 @@
   z-index: 1;
   background-color: transparent;
   width: 100%;
-  padding: 50px var(--padding-horizontal) 0;
+  padding: var(--padding-top-absolute) var(--padding-horizontal) 0;
+
+  /* For sticky animation (header slides in from top). */
+  top: calc(var(--padding-top-absolute) * -1);
+  margin-top: var(--padding-top-absolute);
 
   &.sticky {
     position: fixed;
     background-color: var(--section-orange);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.33);
     padding: 10px var(--padding-horizontal);
+
+    /* Sticky animation (header slides in from top). */
+    transition: top 0.25s ease-in-out;
+    top: 0;
+    margin-top: 0;
   }
 
   @media only screen and (max-width: 991px) {
