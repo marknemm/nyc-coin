@@ -183,26 +183,28 @@ export default function Home() {
         </div>
 
         <div className={`${styles.textBlocks}`}>
-          <div>
-            YOU KNOW THE DEAL.
-            DO SOME SHIT.
-            CHANGE YOUR LIFE.
-            FOR STARTERS, HIT US UP.
-            ASK SOME QUESTIONS.
-          </div>
+          <Fade direction="up" triggerOnce>
+            <div>
+              YOU KNOW THE DEAL.
+              DO SOME SHIT.
+              CHANGE YOUR LIFE.
+              FOR STARTERS, HIT US UP.
+              ASK SOME QUESTIONS.
+            </div>
 
-          <div>
-            <p>
-              BTW, WE ONLY HAVE A TG.
-              DISCORD IS FOR GAMERS—
-              WE’RE BALLERS.
-            </p>
+            <div>
+              <p>
+                BTW, WE ONLY HAVE A TG.
+                DISCORD IS FOR GAMERS—
+                WE’RE BALLERS.
+              </p>
 
-            <p>
-              SEE YOU ON THE NEXT FLR
-              AS WE GET ELEVATED.
-            </p>
-          </div>
+              <p>
+                SEE YOU ON THE NEXT FLR
+                AS WE GET ELEVATED.
+              </p>
+            </div>
+          </Fade>
         </div>
       </div>
     </main>
