@@ -182,8 +182,8 @@ export default function Home() {
           />
         </div>
 
-        <div className={`${styles.textBlocks}`}>
-          <Fade direction="up" triggerOnce>
+        <Fade direction="up" triggerOnce className={`${styles.textBlocks}`}>
+          <div className={`${styles.layout}`}>
             <div>
               YOU KNOW THE DEAL.
               DO SOME SHIT.
@@ -204,8 +204,8 @@ export default function Home() {
                 AS WE GET ELEVATED.
               </p>
             </div>
-          </Fade>
-        </div>
+          </div>
+        </Fade>
       </div>
     </main>
   );

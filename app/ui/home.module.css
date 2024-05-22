@@ -169,15 +169,18 @@
   .textBlocks {
     position: absolute;
     box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
     left: 600px;
     bottom: 100px;
     font-size: clamp(1em, 1dvw, 1.5em);
 
-    & > div {
-      padding: 0 5%;
+    .layout {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+
+      & > div {
+        padding: 0 4%;
+      }
     }
   }
 
@@ -197,15 +200,17 @@
 
   @media only screen and (max-width: 767px) {
     .textBlocks {
-      flex-direction: column;
-      align-items: center;
+      .layout {
+        flex-direction: column;
+        align-items: center;
 
-      & > div {
-        padding: 0 20px;
-        margin-bottom: 20px;
+        & > div {
+          padding: 0 20px;
+          margin-bottom: 1.5dvw;
 
-        &:last-child {
-          margin-bottom: 0;
+          &:last-child {
+            margin-bottom: 0;
+          }
         }
       }
     }
