@@ -2,6 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  @font-face {
+    font-family: 'Roobert';
+    src: local('Roobert'), url('/fonts/Roobert-Regular.otf') format('otf');
+  }
+
+  @font-face {
+    font-family: 'Roobert';
+    src: local('Roobert'), url('/fonts/Roobert-Bold.otf') format('otf');
+    font-weight: bold;
+  }
+
+  @font-face {
+    font-family: 'Roobert';
+    src: local('Roobert'), url('/fonts/Roobert-BoldItalic.otf') format('otf');
+    font-weight: bold;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: 'Roobert';
+    src: local('Roobert'), url('/fonts/Roobert-RegularItalic.otf') format('otf');
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: 'Gupter';
+    src: local('Gupter'), url('/fonts/Google_Fonts/SERIF_Gupter/Gupter-Regular.ttf') format('ttf')
+  }
+
+  @font-face {
+    font-family: 'Gupter';
+    src: local('Gupter'), url('/fonts/Google_Fonts/SERIF_Gupter/Gupter-Medium.ttf') format('ttf');
+    font-weight: 500;
+  }
+
+  @font-face {
+    font-family: 'Gupter';
+    src: local('Gupter'), url('/fonts/Google_Fonts/SERIF_Gupter/Gupter-Bold.ttf') format('ttf');
+    weight: bold;
+  }
+}
+
 :root {
   --foreground: #fff;
   --hover-foreground: #ccc;

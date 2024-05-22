@@ -106,6 +106,16 @@ export default function Home() {
           />
         </div>
 
+        <div className={`${styles.sectionStartText}`}>
+          <div>
+            <Image
+              src="/StreetByStreet.svg"
+              alt="Street by street. Block by block. Trade by trade."
+              fill
+            />
+          </div>
+        </div>
+
         <div className={`${styles.description}`}>
           <Fade
             direction="left"
@@ -140,6 +150,16 @@ export default function Home() {
               </p>
             </div>
           </Fade>
+        </div>
+
+        <div className={`${styles.sectionEndText}`}>
+          <div>
+            <Image
+              src="/FirstTime.svg"
+              alt="First time"
+              fill
+            />
+          </div>
         </div>
       </div>
 
