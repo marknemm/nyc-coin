@@ -2,6 +2,7 @@
 
 import clsx from 'clsx';
 import Image from 'next/image';
+import CopyButton from '../copy-button/copy-button';
 import { useStickyState } from './header.hooks';
 import styles from './header.module.css';
 
@@ -23,24 +24,9 @@ export default function Header() {
     >
 
       <div className={`${styles.left}`}>
-        <button
-          className={styles.copyButton}
-          title="Copy to clipboard"
-          onClick={() => {
-            navigator.clipboard.writeText(copyText);
-          }}
-        >
+        <CopyButton copyText={copyText}>
           Ca: { copyText }
-
-          <span className={styles.copyIcon}>
-            <Image
-              src="/Copy_Icon.svg"
-              alt="Copy"
-              width={24}
-              height={24}
-            />
-          </span>
-        </button>
+        </CopyButton>
       </div>
 
       <div className={`${styles.right}`}>

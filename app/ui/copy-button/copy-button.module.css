@@ -1,0 +1,14 @@
+.copyButton {
+  & > .copyIcon {
+    position: relative;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    margin-left: 10px;
+    bottom: -1px;
+  }
+
+  &:hover {
+    color: var(--hover-foreground);
+  }
+}
