@@ -2,7 +2,6 @@
 
 import clsx from 'clsx';
 import Image from 'next/image';
-import { useRef } from 'react';
 import { useStickyState } from './header.hooks';
 import styles from './header.module.css';
 
@@ -13,7 +12,6 @@ import styles from './header.module.css';
  */
 export default function Header() {
   const copyText = 'Gglerd7Qeme5Wa6Zstr2Bmfbanbdesarhpyugnpakyx3';
-  const headerRef = useRef<HTMLElement>(null);
   const [sticky] = useStickyState();
 
   return (
@@ -22,7 +20,6 @@ export default function Header() {
         `${styles.header}`,
         { [`${styles.sticky}`]: sticky }
       )}
-      ref={headerRef}
     >
 
       <div className={`${styles.left}`}>
@@ -39,7 +36,8 @@ export default function Header() {
             <Image
               src="/Copy_Icon.svg"
               alt="Copy"
-              fill
+              width={24}
+              height={24}
             />
           </span>
         </button>
@@ -61,12 +59,13 @@ export default function Header() {
         <a
           className={`${styles.iconLink}`}
           href="#"
+          title="Twitter"
         >
           <Image
             src="/Tw.png"
             alt="$NYC Logo"
-            fill
-            title="Twitter"
+            width={24}
+            height={24}
           />
         </a>
 
@@ -78,7 +77,8 @@ export default function Header() {
           <Image
             src="/TG.png"
             alt="$NYC Logo"
-            fill
+            width={24}
+            height={24}
           />
         </a>
       </div>

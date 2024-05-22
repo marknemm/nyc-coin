@@ -40,8 +40,8 @@
       display: inline-block;
       width: 1em;
       height: 1em;
-      padding-left: 40px;
-      bottom: -2px;
+      margin-left: 10px;
+      bottom: -1px;
     }
 
     &:hover {
