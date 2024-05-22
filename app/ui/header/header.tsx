@@ -1,7 +1,10 @@
 'use client';
 
-import Image from 'next/image'
-import styles from './header.module.css'
+import clsx from 'clsx';
+import Image from 'next/image';
+import { useRef } from 'react';
+import { useStickyState } from './header.hooks';
+import styles from './header.module.css';
 
 /**
  * The {@link Header} component, with sticky scrolling.
@@ -10,9 +13,17 @@ import styles from './header.module.css'
  */
 export default function Header() {
   const copyText = 'Gglerd7Qeme5Wa6Zstr2Bmfbanbdesarhpyugnpakyx3';
+  const headerRef = useRef<HTMLElement>(null);
+  const [sticky] = useStickyState();
 
   return (
-    <header className={`${styles.header}`}>
+    <header
+      className={clsx(
+        `${styles.header}`,
+        { [`${styles.sticky}`]: sticky }
+      )}
+      ref={headerRef}
+    >
 
       <div className={`${styles.left}`}>
         <button
