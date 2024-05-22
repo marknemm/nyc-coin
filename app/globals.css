@@ -12,12 +12,17 @@
 
 :root {
   --foreground: #fff;
+  --hover-foreground: #ccc;
   --section-blue: #1F48C7;
   --section-orange: #E43A13;
 }
 
 body {
   color: var(--foreground);
+}
+
+a:hover {
+  color: var(--hover-foreground);
 }
 
 @layer utilities {

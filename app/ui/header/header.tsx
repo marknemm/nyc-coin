@@ -14,25 +14,27 @@ export default function Header() {
   return (
     <header className={`${styles.header}`}>
 
-      <button
-        className={styles.copyButton}
-        title="Copy to clipboard"
-        onClick={() => {
-          navigator.clipboard.writeText(copyText);
-        }}
-      >
-        Ca: { copyText }
+      <div className={`${styles.left}`}>
+        <button
+          className={styles.copyButton}
+          title="Copy to clipboard"
+          onClick={() => {
+            navigator.clipboard.writeText(copyText);
+          }}
+        >
+          Ca: { copyText }
 
-        <span className={styles.copyIcon}>
-          <Image
-            src="/Copy_Icon.svg"
-            alt="Copy"
-            fill
-          />
-        </span>
-      </button>
+          <span className={styles.copyIcon}>
+            <Image
+              src="/Copy_Icon.svg"
+              alt="Copy"
+              fill
+            />
+          </span>
+        </button>
+      </div>
 
-      <div className={`${styles.links}`}>
+      <div className={`${styles.right}`}>
         <a href="#">
           Dextools
         </a>
@@ -53,12 +55,14 @@ export default function Header() {
             src="/Tw.png"
             alt="$NYC Logo"
             fill
+            title="Twitter"
           />
         </a>
 
         <a
           className={`${styles.iconLink}`}
           href="#"
+          title="Telegram"
         >
           <Image
             src="/TG.png"
