@@ -21,7 +21,7 @@ export default function CopyButton ({ children, copyText }: CopyButtonProps) {
           }}
           data-tooltip-id="copy-tooltip"
         >
-          {children}
+          {children ?? copyText}
 
           <span className={styles.copyIcon}>
             <Image
