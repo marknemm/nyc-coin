@@ -1,13 +1,5 @@
 @tailwind base;
 @tailwind components;
-
-@layer base {
-  @font-face {
-    font-family: 'Roobert';
-    src: local('Roobert'), url('/fonts/Roobert-Regular.otf') format('otf');
-  }
-}
-
 @tailwind utilities;
 
 :root {
@@ -19,6 +11,7 @@
 
 body {
   color: var(--foreground);
+  font-family: 'Roobert', sans-serif;
 }
 
 a:hover {
