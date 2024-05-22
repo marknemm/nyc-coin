@@ -1,4 +1,3 @@
-import Header from '@/app/ui/header/header';
 import styles from '@/app/ui/home.module.css';
 import Image from "next/image";
 
@@ -20,31 +19,33 @@ export default function Home() {
           />
         </div>
 
-        <div className={styles.nycContainer}>
-          <Image
-            src="/$NYC_Logo.png"
-            alt="$NYC Logo"
-            fill
-            priority
-          />
-        </div>
+        <div className={`${styles.mainLogos}`}>
+          <div className={styles.nycContainer}>
+            <Image
+              src="/$NYC_Logo.png"
+              alt="$NYC Logo"
+              fill
+              priority
+            />
+          </div>
 
-        <div className={styles.gothamContainer}>
-          <Image
-            src="/Sol_Of_Gotham.png"
-            alt="The SOL of Gotham"
-            fill
-            priority
-          />
-        </div>
+          <div className={styles.gothamContainer}>
+            <Image
+              src="/Sol_Of_Gotham.png"
+              alt="The SOL of Gotham"
+              fill
+              priority
+            />
+          </div>
 
-        <div className={styles.interboroContainer}>
-          <Image
-            src="/Interboro_Currency.svg"
-            alt="The only interboro currency"
-            fill
-            priority
-          />
+          <div className={styles.interboroContainer}>
+            <Image
+              src="/Interboro_Currency.svg"
+              alt="The only interboro currency"
+              fill
+              priority
+            />
+          </div>
         </div>
       </div>
 
