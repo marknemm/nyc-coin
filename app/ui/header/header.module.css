@@ -1,5 +1,6 @@
 .header {
   --padding-top-absolute: 50px;
+  --padding-vertical-sticky: 10px;
   --padding-horizontal: 50px;
 
   position: absolute;
@@ -15,27 +16,38 @@
 
   &.sticky {
     position: fixed;
-    background-color: var(--section-orange);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.33);
-    padding: 10px var(--padding-horizontal);
+    padding: var(--padding-vertical-sticky) var(--padding-horizontal);
 
     /* Sticky animation (header slides in from top). */
     transition: top 0.25s ease-in-out;
     top: 0;
     margin-top: 0;
   }
+}
 
-  @media only screen and (max-width: 991px) {
-    display: none;
+.desktop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.mobile {
+  display: none;
+
+  .hamburgerIcon {
+    position: relative;
+    display: inline-block;
+    top: -2px;
   }
 }
 
-.left {
+.start {
   align-self: flex-start;
   flex: 1;
 }
 
-.right {
+.end {
   align-self: flex-end;
 
   & > * {
@@ -48,5 +60,26 @@
     width: 1.3em;
     height: 1.3em;
     bottom: -3px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .header {
+    --padding-top-absolute: 0;
+    --padding-vertical-sticky: 0;
+    --padding-horizontal: 15px;
+
+    position: fixed;
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
   }
 }

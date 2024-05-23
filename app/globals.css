@@ -47,7 +47,7 @@
 
 :root {
   --foreground: #fff;
-  --hover-foreground: #ccc;
+  --hover-foreground: #000;
   --section-blue: #1F48C7;
   --section-orange: #E43A13;
 }
@@ -55,6 +55,7 @@
 body {
   color: var(--foreground);
   font-family: 'Roobert', sans-serif;
+  line-height: 140%;
 }
 
 a:hover {

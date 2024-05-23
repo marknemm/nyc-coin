@@ -65,9 +65,15 @@ export default function Home() {
           direction="right"
           triggerOnce
         >
-          <div className={`${styles.textContent} ${styles.animateLeft}`}>
+          <div className={`${styles.textContent}`}>
             <div className={styles.title}>
-              Fuck,<br/> Another Memecoin?
+              <div>
+                <Image
+                  src="/FuckAnotherMeme.svg"
+                  alt="Fuck another memecoin?"
+                  fill
+                />
+              </div>
             </div>
 
             <div className={styles.description}>
