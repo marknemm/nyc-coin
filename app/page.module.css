@@ -51,7 +51,7 @@
     }
   }
 
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: var(--mobile-width-max)) {
     min-height: 100vh;
     padding: 12dvw 20px;
   }

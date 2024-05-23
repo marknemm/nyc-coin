@@ -1,6 +1,6 @@
+import "@/app/globals.css";
+import Header from '@/app/ui/header/header';
 import type { Metadata } from "next";
-import "./globals.css";
-import Header from './ui/header/header';
 
 export const metadata: Metadata = {
   title: "$NYC",

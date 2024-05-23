@@ -50,6 +50,11 @@
   --hover-foreground: #000;
   --section-blue: #1F48C7;
   --section-orange: #E43A13;
+
+  --desktop-width-min: 992px;
+  --tablet-width-max: 991px;
+  --tablet-width-min: 768px;
+  --mobile-width-max: 767px;
 }
 
 body {

@@ -1,15 +1,15 @@
 'use client';
 
-import styles from '@/app/ui/home.module.css';
+import styles from '@/app/page.module.css';
 import Image from "next/image";
 import { Fade } from 'react-awesome-reveal';
 
 /**
- * The {@link Home} page component.
+ * The {@link HomePage} component.
  *
- * @returns The {@link Home} page component JSX.
+ * @returns The {@link HomePage} component JSX.
  */
-export default function Home() {
+export default function HomePage() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
       <div className={`${styles.section} ${styles.first}`}>
