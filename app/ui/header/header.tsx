@@ -111,6 +111,7 @@ export default function Header() {
           open={drawerOpen}
           onClose={closeDrawer}
           className={`${styles.drawer} ${styles.container}`}
+          size={'auto'}
         >
           <button
             className={`${styles.closeButton}`}

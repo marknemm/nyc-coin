@@ -67,7 +67,7 @@
     }
 
     &:hover {
-      background-color: rgba(0, 0, 0, 0.07);
+      background-color: var(--hover-background);
     }
   }
 }
@@ -82,6 +82,7 @@
   .header {
     --padding-top-absolute: 10px;
     --padding-horizontal: 15px;
+    --hover-foreground: #ccc;
   }
 
   .desktop {
@@ -101,15 +102,17 @@
     border-radius: 50%;
 
     &:hover {
-      background-color: rgba(0, 0, 0, 0.07);
+      background-color: var(--hover-background);
     }
   }
 
   .drawer.container {
+    --hover-background: rgba(255, 255, 255, 0.1);
+
     background-color: rgba(0, 0, 0, 0.8);
     height: auto;
     padding: 20px;
-    padding-right: 50px;
+    padding-right: 65px;
 
     .closeButton {
       position: absolute;
@@ -120,26 +123,8 @@
       padding: 8px 10px;
 
       &:hover {
-        background-color: rgba(255, 255, 255, 0.1);
+        background-color: var(--hover-background);
       }
-    }
-  }
-
-  .copyButton {
-    display: block;
-    width: 100%;
-    text-align: left;
-    white-space: nowrap;
-
-    & > span:first-child {
-      overflow: hidden;
-      text-overflow: ellipsis;
-      text-align: left;
-      max-width: 100%;
-    }
-
-    &:hover {
-      color: #ccc;
     }
   }
 
@@ -150,10 +135,6 @@
       display: block;
       margin-left: 0;
       padding: 2px 0;
-
-      &:hover {
-        color: #ccc;
-      }
     }
 
     .iconLink {

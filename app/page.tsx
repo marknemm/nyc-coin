@@ -32,22 +32,24 @@ export default function HomePage() {
             />
           </div>
 
-          <div className={styles.gothamContainer}>
-            <Image
-              src="/Sol_Of_Gotham.png"
-              alt="The SOL of Gotham"
-              fill
-              priority
-            />
-          </div>
+          <div className={`${styles.subLogos}`}>
+            <div className={styles.gothamContainer}>
+              <Image
+                src="/Sol_Of_Gotham.png"
+                alt="The SOL of Gotham"
+                fill
+                priority
+              />
+            </div>
 
-          <div className={styles.interboroContainer}>
-            <Image
-              src="/Interboro_Currency.svg"
-              alt="The only interboro currency"
-              fill
-              priority
-            />
+            <div className={styles.interboroContainer}>
+              <Image
+                src="/Interboro_Currency.svg"
+                alt="The only interboro currency"
+                fill
+                priority
+              />
+            </div>
           </div>
         </div>
       </div>

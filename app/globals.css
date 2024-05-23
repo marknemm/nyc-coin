@@ -47,6 +47,7 @@
 
 :root {
   --foreground: #fff;
+  --hover-background: rgba(0, 0, 0, 0.07);
   --hover-foreground: #000;
   --section-blue: #1F48C7;
   --section-orange: #E43A13;

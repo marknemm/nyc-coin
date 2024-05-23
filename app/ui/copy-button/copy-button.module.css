@@ -1,4 +1,18 @@
 .copyButton {
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  max-width: 100%;
+
+  & > span:first-child {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+    max-width: calc(100% - 1em - 10px);
+  }
+
   & > .copyIcon {
     position: relative;
     display: inline-block;
@@ -6,6 +20,7 @@
     height: 1em;
     margin-left: 10px;
     bottom: -1px;
+    vertical-align: top;
   }
 
   &:hover {

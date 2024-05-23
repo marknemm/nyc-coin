@@ -51,9 +51,9 @@
     }
   }
 
-  @media only screen and (max-width: var(--mobile-width-max)) {
-    min-height: 100vh;
-    padding: 12dvw 20px;
+  @media only screen and (max-width: 767px) {
+    padding-left: 5.3%;
+    padding-right: 5.3%;
   }
 }
 
@@ -79,6 +79,7 @@
 
     & > img {
       object-fit: contain;
+      object-position: center center;
     }
   }
 
@@ -94,6 +95,33 @@
 
   .interboroContainer {
     padding-top: 1.4%;
+  }
+
+  @media only screen and (max-width: 991px) {
+    .gothamContainer,
+    .interboroContainer {
+      position: relative;
+      min-width: 420px;
+    }
+
+    .gothamContainer {
+      padding-top: 8%;
+    }
+
+    .interboroContainer {
+      padding-top: 3.5%;
+    }
+  }
+
+  @media only screen and (max-width: 420px) {
+    .subLogos {
+      overflow: hidden;
+    }
+
+    .gothamContainer,
+    .interboroContainer {
+      left: calc(50% - 210px);
+    }
   }
 }
 
@@ -165,7 +193,7 @@
     justify-content: center;
     width: 50%;
     min-height: 100vh;
-    padding: calc(max(min(25dvw, 337px), 50vh - 50%)) calc(min(5.3%, 72px));
+    padding: calc(min(25%, 337px)) 5.3%;
     background: var(--section-blue);
     font-size: clamp(1em, 1.3dvw, 1.2em);
   }
@@ -181,8 +209,8 @@
     .description {
       width: 100%;
       min-height: 0;
-      padding-top: calc(max(35vw, 120px));
-      padding-bottom: calc(max(21vw, 72px));
+      padding-top: max(25%, 100px);
+      padding-bottom: max(21%, 100px);
     }
   }
 }
@@ -250,7 +278,7 @@
         align-items: center;
 
         & > div {
-          padding: 0 20px;
+          padding: 0;
           margin-bottom: 1em;
 
           &:last-child {
