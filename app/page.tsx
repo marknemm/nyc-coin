@@ -11,7 +11,7 @@ import { Fade } from 'react-awesome-reveal';
  */
 export default function HomePage() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between">
+    <main>
       <div className={`${styles.section} ${styles.first}`}>
         <div className={styles.background}>
           <Image
@@ -80,25 +80,16 @@ export default function HomePage() {
 
             <div className={styles.description}>
               <p>
-                EH. NOT REALLY. WE DEVS OF $NYC,
-                ARE LEGIT NEW YORKERS. LIVE + WORK HERE.
-                THAT’S NO SHIT. GOT THE DL TO PROVE IT.
+                NO. WE ARE $NYC, LEGIT NEW YORKERS. TEN TOES DOWN.
               </p>
 
               <p>
-                WE’RE BUILDING A PROJECT, FOR REALS.
-                BEYOND A CORNY, HACK PHOTOSHOP JOB OR
-                HOT, DUMB NARRATIVE OF THE MOMENT.
+                WE’RE BUILDING BEYOND A CORNY, HACK PHOTOSHOP JOB OR HOT, DUMB NARRATIVE.
               </p>
 
               <p>
-                THIS INITIATIVE SPEAKS TO THE CALIBER OF
-                CITY THAT WE LOVE. THE CITY THAT’S BETTER
-                THAN EVERY OTHER ONE.
-              </p>
-
-              <p>
-                $NYC—THE CITY THAT PLAYS FOR KEEPS.
+                THIS INITIATIVE SPEAKS TO THE CALIBER AND CULTURE OF CITY THAT WE LOVE.
+                THE CITY THAT’S BETTER THAN EVERY OTHER. $NYC—THE CITY THAT PLAYS FOR KEEPS.
               </p>
             </div>
           </div>
@@ -114,7 +105,7 @@ export default function HomePage() {
           />
         </div>
 
-        <div className={`${styles.sectionStartText}`}>
+        <div className={`${styles.sectionHeadline}`}>
           <div>
             <Image
               src="/StreetByStreet.svg"
@@ -131,30 +122,15 @@ export default function HomePage() {
           >
             <div>
               <p>
-                SO….THIS PROJECT RUNS ON SOLANA.
-              </p>
-
-              <p>
-                IT’S THE FASTEST AND STURDIEST CHAIN.
-                NO REASON TO ARGUE. OR RESEARCH.
+                RUN ON SOLANA. THE FASTEST AND STURDIEST CHAIN.
+                NO REASON TO ARGUE. NO ABILITY TO RESEARCH.
                 IT JUST IS.
               </p>
 
               <p>
-                GET A WALLET, BUY SOL AND THEN
-                SWAP IN SOME $NYC.
-              </p>
-
-              <p>
-                AND YEAH, YEAH, YEAH, DON’T WORRY.
-              </p>
-
-              <p>
+                YEAH, YEAH, YEAH, DON’T WORRY.
                 YOU’RE STILL EARLY.
-              </p>
-
-              <p>
-                WE AIMING TO SCRAPE THAT FUCKING SKY.
+                CANDLES SO HIGH, THEY’LL SCRAPE THE FUCKING SKY.
               </p>
             </div>
           </Fade>
@@ -170,7 +146,7 @@ export default function HomePage() {
           />
         </div>
 
-        <div className={`${styles.sectionStartText}`}>
+        <div className={`${styles.sectionHeadline}`}>
           <div>
             <Image
               src="/FirstTime.svg"
@@ -182,7 +158,7 @@ export default function HomePage() {
       </div>
 
       <div className={`${styles.section} ${styles.fifth}`}>
-        <div className={`${styles.sectionStartText}`}>
+        <div className={`${styles.sectionHeadline}`}>
           <div>
             <Image
               src="/LongTime.svg"
@@ -210,7 +186,7 @@ export default function HomePage() {
           />
         </div>
 
-        <div className={`${styles.sectionStartText}`}>
+        <div className={`${styles.sectionHeadline}`}>
           <div>
             <Image
               src="/SweatTheTech.svg"
@@ -241,16 +217,9 @@ export default function HomePage() {
             </div>
 
             <div>
-              <p>
-                BTW, WE ONLY HAVE A TG.
-                DISCORD IS FOR GAMERS—
-                WE’RE BALLERS.
-              </p>
-
-              <p>
-                SEE YOU ON THE NEXT FLR
-                AS WE GET ELEVATED.
-              </p>
+              BTW, WE ONLY HAVE A TG.
+              DISCORD IS FOR GAMERS—
+              WE’RE BALLERS.
             </div>
           </div>
         </Fade>

@@ -36,22 +36,35 @@ export default function Header() {
       </div>
 
       <nav className={`${styles.end}`}>
-        <a href="#" onClick={closeDrawer}>
+        <a
+          href="https://www.dextools.io/app/en/solana/pair-explorer/7p5yMdMJLQX2QCM7wD3sm6G7bgsKFvkUCZMpVRtxRQcj?t=1716573652638"
+          target="_blank"
+          onClick={closeDrawer}
+        >
           Dextools
         </a>
 
-        <a href="#" onClick={closeDrawer}>
+        <a
+          href="https://dexscreener.com/solana/7p5ymdmjlqx2qcm7wd3sm6g7bgskfvkuczmpvrtxrqcj"
+          target="_blank"
+          onClick={closeDrawer}
+        >
           Screener
         </a>
 
-        <a href="#" onClick={closeDrawer}>
+        <a
+          href="https://jup.ag/swap/SOL-GGLERd7QeMe5wa6Zstr2BMFbaNbdeSaRhPyugNpaKyx3"
+          target="_blank"
+          onClick={closeDrawer}
+        >
           Buy
         </a>
 
         <a
           className={`${styles.iconLink}`}
-          href="#"
+          href="https://twitter.com/nyc_solana"
           title="Twitter"
+          target="_blank"
           onClick={closeDrawer}
         >
           <Image
@@ -65,8 +78,9 @@ export default function Header() {
 
         <a
           className={`${styles.iconLink}`}
-          href="#"
+          href="https://t.me/+VwqG2w_hEddmYzQ0"
           title="Telegram"
+          target="_blank"
           onClick={closeDrawer}
         >
           <Image

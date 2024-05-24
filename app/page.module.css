@@ -1,4 +1,6 @@
 .section {
+  --headline-max-width: 1350px;
+
   position: relative;
   box-sizing: border-box;
   display: flex;
@@ -7,7 +9,7 @@
   align-items: center;
   width: 100%;
   min-height: 100vh;
-  padding: 12dvw 100px;
+  padding: 12vw 100px;
 
   & > .background {
     position: absolute;
@@ -22,7 +24,7 @@
     }
   }
 
-  .sectionStartText {
+  .sectionHeadline {
     position: absolute;
     z-index: 1;
     box-sizing: border-box;
@@ -35,7 +37,7 @@
     width: 90%;
     margin-left: auto;
     margin-right: auto;
-    max-width: 1350px;
+    max-width: var(--headline-max-width);
 
     & > div {
       position: relative;
@@ -60,6 +62,7 @@
 .first {
   padding-left: 0;
   padding-right: 0;
+  min-height: 100svh;
 
   .mainLogos {
     position: relative;
@@ -131,7 +134,7 @@
   .textContent {
     position: relative;
     text-transform: uppercase;
-    width: 35dvw;
+    width: 35vw;
 
     .title {
       position: relative;
@@ -139,7 +142,7 @@
 
       & > div {
         position: relative;
-        padding-top: 25%;
+        padding-top: 37%;
 
         & > img {
           object-fit: contain;
@@ -149,7 +152,7 @@
     }
 
     .description {
-      font-size: clamp(1em, 1.5dvw, 1.5em);
+      font-size: clamp(1em, 1.5vw, 1.5em);
     }
   }
 
@@ -180,7 +183,7 @@
     }
   }
 
-  .sectionStartText {
+  .sectionHeadline {
     transform: translateY(-16.5%);
     width: 100%;
   }
@@ -193,9 +196,9 @@
     justify-content: center;
     width: 50%;
     min-height: 100vh;
-    padding: calc(min(25%, 337px)) 5.3%;
+    padding: min(calc(20% + 2.7em), calc(var(--headline-max-width) / 4)) 5.3%;
     background: var(--section-blue);
-    font-size: clamp(1em, 1.3dvw, 1.2em);
+    font-size: clamp(1em, 1.5vw, 1.5em);
   }
 
   @media only screen and (max-width: 991px) {
@@ -209,8 +212,7 @@
     .description {
       width: 100%;
       min-height: 0;
-      padding-top: max(25%, 100px);
-      padding-bottom: max(21%, 100px);
+      padding-bottom: max(15%, 90px);
     }
   }
 }
@@ -219,14 +221,14 @@
   background: var(--section-orange);
   height: auto;
   min-height: 0;
-  font-size: clamp(1em, 1.3dvw, 1.2em);
+  font-size: clamp(1em, 1.3vw, 1.5em);
   padding: 0 5.3%;
-  padding-top: calc(max(9vw, 60px));
-  padding-bottom: calc(max(10vw, 72px));
+  padding-top: max(8.5%, 60px);
+  padding-bottom: max(10%, 72px);
 }
 
 .sixth {
-  .sectionStartText {
+  .sectionHeadline {
     transform: translateY(-19%);
     width: 100%;
   }
@@ -242,32 +244,47 @@
   .textBlocks {
     position: absolute;
     box-sizing: border-box;
-    left: 600px;
+    left: max(38%, 70vh);
     bottom: 100px;
-    font-size: clamp(1em, 1dvw, 1.5em);
+    padding-right: 10%;
+    font-size: clamp(1em, 1vw, 1.5em);
 
     .layout {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       justify-content: center;
 
       & > div {
-        padding: 0 4%;
+        margin-bottom: 1em;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
       }
     }
   }
 
-  @media only screen and (max-width: 1090px) {
+  @media only screen and (max-aspect-ratio: 7/6) {
     .background {
       & > img {
         object-position: right center;
       }
     }
+  }
+
+  @media only screen and (max-width: 1200px) {
+    .textBlocks {
+      padding-right: 5.3%;
+    }
+  }
+
+  @media only screen and (max-width: 1090px) and (max-aspect-ratio: 7/6) {
 
     .textBlocks {
       position: relative;
       left: auto;
       bottom: auto;
+      padding-right: 0;
     }
   }
 

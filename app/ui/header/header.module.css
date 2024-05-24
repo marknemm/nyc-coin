@@ -2,6 +2,7 @@
   --padding-top-absolute: 50px;
   --padding-vertical-sticky: 10px;
   --padding-horizontal: 50px;
+  --foregound: #fff;
 
   position: absolute;
   box-sizing: border-box;
@@ -11,6 +12,7 @@
   background-color: transparent;
   width: 100%;
   padding: var(--padding-top-absolute) var(--padding-horizontal) 0;
+  color: var(--foregound);
 
   /* For sticky animation (header slides in from top). */
   top: calc(var(--padding-top-absolute) * -1);
@@ -83,6 +85,12 @@
     --padding-top-absolute: 10px;
     --padding-horizontal: 15px;
     --hover-foreground: #ccc;
+
+    position: fixed;
+
+    &.sticky {
+      transition: none;
+    }
   }
 
   .desktop {
