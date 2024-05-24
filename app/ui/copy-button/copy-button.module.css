@@ -18,8 +18,8 @@
     display: inline-block;
     width: 1em;
     height: 1em;
+    bottom: -2px;
     margin-left: 10px;
-    bottom: -1px;
     vertical-align: top;
   }
 
