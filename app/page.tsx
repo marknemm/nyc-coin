@@ -177,11 +177,11 @@ export default function HomePage() {
         </div>
 
         <Fade triggerOnce>
-          <div>
+          <p>
             THE STRUGGLE IS REAL. PROJECTS ARE MESSY. AND WE CONTINUE BECAUSE IT MATTERS TOO MUCH TO US.
             $NYC WILL EVENTUALLY BE USED TO BUY QUALITY GOODS FROM YOUR HARD-BOILED, ALL-BORO KINGS HERE
             AT THE HELM. SHIT THAT WILL ONLY BE AVAILABLE HERE AND FROM US. NO NFTS. JUST REAL SHIT. TRUST.
-          </div>
+          </p>
         </Fade>
       </section>
 
@@ -216,19 +216,19 @@ export default function HomePage() {
 
         <Fade direction="up" triggerOnce className={`${styles.textBlocks}`}>
           <div className={`${styles.layout}`}>
-            <div>
+            <p>
               YOU KNOW THE DEAL.
               DO SOME SHIT.
               CHANGE YOUR LIFE.
               FOR STARTERS, HIT US UP.
               ASK SOME QUESTIONS.
-            </div>
+            </p>
 
-            <div>
+            <p>
               BTW, WE ONLY HAVE A TG.
               DISCORD IS FOR GAMERS—
               WE’RE BALLERS.
-            </div>
+            </p>
           </div>
         </Fade>
       </div>

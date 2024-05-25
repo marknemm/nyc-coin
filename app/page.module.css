@@ -9,7 +9,7 @@
   align-items: center;
   width: 100%;
   min-height: 100vh;
-  padding: 12vw 100px;
+  padding: 12vw var(--pad-h-max);
 
   & > .background {
     position: absolute;
@@ -44,17 +44,9 @@
     }
   }
 
-  & :global(p) {
-    margin-bottom: 1em;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-
   @media only screen and (max-width: 767px) {
-    padding-left: 5.3%;
-    padding-right: 5.3%;
+    padding-left: var(--pad-h-clamp);
+    padding-right: var(--pad-h-clamp);
   }
 }
 
@@ -151,7 +143,7 @@
     }
 
     .description {
-      font-size: clamp(1em, 1.5vw, 1.5em);
+      font-size: var(--font-size-clamp);
     }
   }
 
@@ -206,8 +198,8 @@
     justify-content: center;
     width: 50%;
     min-height: 100vh;
-    padding: min(calc(20% + 2.7em), calc(var(--headline-max-width) / 4)) 5.3%;
-    font-size: clamp(1em, 1.5vw, 1.5em);
+    padding: min(calc(20% + 2.7em), calc(var(--headline-max-width) / 4)) var(--pad-h-clamp);
+    font-size: var(--font-size-clamp);
   }
 
   @media only screen and (max-width: 991px) {
@@ -230,8 +222,8 @@
   background: var(--section-orange);
   height: auto;
   min-height: 0;
-  font-size: clamp(1em, 1.3vw, 1.5em);
-  padding: 0 5.3%;
+  font-size: var(--font-size-clamp);
+  padding: 0 var(--pad-h-clamp);
   padding-top: max(8.5%, 60px);
   padding-bottom: max(10%, 72px);
 }
@@ -244,6 +236,8 @@
 }
 
 .seventh {
+  --font-size-scale: 1.2vw;
+
   .background {
     & > img {
       object-position: left center;
@@ -256,20 +250,12 @@
     left: max(38%, 70vh);
     bottom: 100px;
     padding-right: 10%;
-    font-size: clamp(1em, 1vw, 1.5em);
+    font-size: var(--font-size-clamp);
 
     .layout {
       display: flex;
       flex-direction: column;
       justify-content: center;
-
-      & > * {
-        margin-bottom: 1em;
-
-        &:last-child {
-          margin-bottom: 0;
-        }
-      }
     }
   }
 
@@ -283,7 +269,7 @@
 
   @media only screen and (max-width: 1200px) {
     .textBlocks {
-      padding-right: 5.3%;
+      padding-right: var(--pad-h-clamp);
     }
   }
 
@@ -299,19 +285,7 @@
 
   @media only screen and (max-width: 767px) {
     .textBlocks {
-      .layout {
-        flex-direction: column;
-        align-items: center;
-
-        & > * {
-          padding: 0;
-          margin-bottom: 1em;
-
-          &:last-child {
-            margin-bottom: 0;
-          }
-        }
-      }
+      bottom: auto
     }
   }
 }

@@ -13,6 +13,17 @@
   --tablet-width-max: 991px;
   --tablet-width-min: 768px;
   --mobile-width-max: 767px;
+
+  --font-size-min: 1em;
+  --font-size-scale: 1.5vw;
+  --font-size-max: 2em;
+  --font-size-clamp: clamp(var(--font-size-min), var(--font-size-scale), var(--font-size-max));
+  --line-height: 1;
+
+  --pad-h-min: 16px;
+  --pad-h-scale: 5.3%;
+  --pad-h-max: 100px;
+  --pad-h-clamp: clamp(var(--pad-h-min), var(--pad-h-scale), var(--pad-h-max));
 }
 
 html,
@@ -24,8 +35,22 @@ body {
 
 body {
   color: var(--foreground);
-  line-height: 150%;
   overflow-x: hidden;
+}
+
+p {
+  margin-bottom: 1em;
+  line-height: var(--line-height);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  body {
+    --line-height: 1.2;
+  }
 }
 
 a:hover {
