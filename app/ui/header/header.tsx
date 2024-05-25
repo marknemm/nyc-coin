@@ -30,6 +30,8 @@ export default function Header() {
         <CopyButton
           className={`${styles.copyButton}`}
           copyText={copyText}
+          innerClassName={`${styles.inner}`}
+          iconClassName={`${styles.icon}`}
         >
           Ca: { copyText }
         </CopyButton>

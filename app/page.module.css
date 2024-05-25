@@ -26,7 +26,6 @@
 
   .sectionHeadline {
     position: absolute;
-    z-index: 1;
     box-sizing: border-box;
     top: 0;
     left: 0;
@@ -176,10 +175,21 @@
 .third {
   display: block;
   padding: 0;
+  background-color: var(--section-blue);
 
   .background {
     & > img {
       object-position: right center;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100%;
+      background-color: var(--section-blue);
     }
   }
 
@@ -197,7 +207,6 @@
     width: 50%;
     min-height: 100vh;
     padding: min(calc(20% + 2.7em), calc(var(--headline-max-width) / 4)) 5.3%;
-    background: var(--section-blue);
     font-size: clamp(1em, 1.5vw, 1.5em);
   }
 

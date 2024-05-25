@@ -3,7 +3,13 @@ import { ReactNode, useRef, useState } from 'react';
 import { Tooltip } from 'react-tooltip';
 import styles from './copy-button.module.css';
 
-export default function CopyButton ({ children, className = '', copyText = '' }: CopyButtonProps) {
+export default function CopyButton ({
+  children,
+  className = '',
+  innerClassName = '',
+  iconClassName = '',
+  copyText = ''
+}: CopyButtonProps) {
   const [isTooltipVisible, setIsTooltipVisible] = useState(false);
   const timeoutRef = useRef<NodeJS.Timeout>();
 
@@ -21,11 +27,11 @@ export default function CopyButton ({ children, className = '', copyText = '' }:
         }}
         data-tooltip-id="copy-tooltip"
       >
-        <span>
+        <span className={`${styles.inner} ${innerClassName}`}>
           {children ?? copyText}
         </span>
 
-        <span className={styles.copyIcon}>
+        <span className={`${styles.icon} ${iconClassName}`}>
           <Image
             src="/Copy_Icon.svg"
             alt="Copy"
@@ -50,4 +56,6 @@ export interface CopyButtonProps {
   children?: ReactNode;
   className?: string;
   copyText?: string;
+  iconClassName?: string;
+  innerClassName?: string;
 }

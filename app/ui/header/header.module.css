@@ -1,6 +1,5 @@
 .header {
   --padding-top-absolute: 50px;
-  --padding-vertical-sticky: 10px;
   --padding-horizontal: 50px;
   --foregound: #fff;
 
@@ -20,7 +19,12 @@
 
   &.sticky {
     position: fixed;
-    padding: var(--padding-vertical-sticky) var(--padding-horizontal);
+    padding: 10px var(--padding-horizontal) 0;
+    pointer-events: none;
+
+    & > * {
+      pointer-events: auto;
+    }
 
     /* Sticky animation (header slides in from top). */
     transition: top 0.25s ease-in-out;
@@ -70,6 +74,9 @@
 
     &:hover {
       background-color: var(--hover-background);
+      & > img {
+        filter: invert(100%);
+      }
     }
   }
 }
@@ -136,6 +143,14 @@
     }
   }
 
+  .copyButton {
+    &:hover {
+      .icon > img {
+        filter: invert(20%);
+      }
+    }
+  }
+
   .end {
     margin-top: 1.3em;
 
@@ -152,6 +167,12 @@
       margin-top: 1.3em;
       padding: 0;
       top: 0;
+
+      &:hover {
+        & > img {
+          filter: invert(20%);
+        }
+      }
 
       &:last-child {
         margin-right: 0;

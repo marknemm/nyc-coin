@@ -158,6 +158,14 @@ export default function HomePage() {
       </section>
 
       <section className={`${styles.section} ${styles.fifth}`}>
+        {/* <div className={`${styles.background}`}>
+          <Image
+            src="/Overlay.svg"
+            alt=""
+            fill
+          />
+        </div> */}
+
         <div className={`${styles.sectionHeadline}`}>
           <h2>
             <Image

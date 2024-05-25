@@ -4,7 +4,7 @@
   white-space: nowrap;
   max-width: 100%;
 
-  & > span:first-child {
+  .inner {
     position: relative;
     display: inline-block;
     overflow: hidden;
@@ -13,7 +13,7 @@
     max-width: calc(100% - 1em - 10px);
   }
 
-  & > .copyIcon {
+  .icon {
     position: relative;
     display: inline-block;
     width: 1em;
@@ -25,5 +25,9 @@
 
   &:hover {
     color: var(--hover-foreground);
+
+    .icon > img {
+      filter: invert(100%);
+    }
   }
 }
