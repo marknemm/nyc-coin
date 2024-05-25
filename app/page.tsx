@@ -12,7 +12,7 @@ import { Fade } from 'react-awesome-reveal';
 export default function HomePage() {
   return (
     <main>
-      <div className={`${styles.section} ${styles.first}`}>
+      <section className={`${styles.section} ${styles.first}`}>
         <div className={styles.background}>
           <Image
             src="/HERO_BG.png"
@@ -23,14 +23,14 @@ export default function HomePage() {
         </div>
 
         <div className={`${styles.mainLogos}`}>
-          <div className={styles.nycContainer}>
+          <h1 className={styles.nycContainer}>
             <Image
               src="/$NYC_Logo.png"
-              alt="$NYC Logo"
+              alt="$NYC"
               fill
               priority
             />
-          </div>
+          </h1>
 
           <div className={`${styles.subLogos}`}>
             <div className={styles.gothamContainer}>
@@ -52,9 +52,9 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div className={`${styles.section} ${styles.second}`}>
+      <section className={`${styles.section} ${styles.second}`}>
         <div className={`${styles.background}`}>
           <Image
             src="/SECTION2_BG.png"
@@ -69,13 +69,13 @@ export default function HomePage() {
         >
           <div className={`${styles.textContent}`}>
             <div className={styles.title}>
-              <div>
+              <h2>
                 <Image
                   src="/FuckAnotherMeme.svg"
                   alt="Fuck another memecoin?"
                   fill
                 />
-              </div>
+              </h2>
             </div>
 
             <div className={styles.description}>
@@ -94,9 +94,9 @@ export default function HomePage() {
             </div>
           </div>
         </Fade>
-      </div>
+      </section>
 
-      <div className={`${styles.section} ${styles.third}`}>
+      <section className={`${styles.section} ${styles.third}`}>
         <div className={`${styles.background}`}>
           <Image
             src="/SECTION3_BG.png"
@@ -106,13 +106,13 @@ export default function HomePage() {
         </div>
 
         <div className={`${styles.sectionHeadline}`}>
-          <div>
+          <h2>
             <Image
               src="/StreetByStreet.svg"
               alt="Street by street. Block by block. Trade by trade."
               fill
             />
-          </div>
+          </h2>
         </div>
 
         <div className={`${styles.description}`}>
@@ -135,9 +135,9 @@ export default function HomePage() {
             </div>
           </Fade>
         </div>
-      </div>
+      </section>
 
-      <div className={`${styles.section} ${styles.fourth}`}>
+      <section className={`${styles.section} ${styles.fourth}`}>
         <div className={`${styles.background}`}>
           <Image
             src="/SECTION4_BG.png"
@@ -147,25 +147,25 @@ export default function HomePage() {
         </div>
 
         <div className={`${styles.sectionHeadline}`}>
-          <div>
+          <h2>
             <Image
               src="/FirstTime.svg"
               alt="First time"
               fill
             />
-          </div>
+          </h2>
         </div>
-      </div>
+      </section>
 
-      <div className={`${styles.section} ${styles.fifth}`}>
+      <section className={`${styles.section} ${styles.fifth}`}>
         <div className={`${styles.sectionHeadline}`}>
-          <div>
+          <h2>
             <Image
               src="/LongTime.svg"
               alt="Long Time."
               fill
             />
-          </div>
+          </h2>
         </div>
 
         <Fade triggerOnce>
@@ -175,9 +175,9 @@ export default function HomePage() {
             AT THE HELM. SHIT THAT WILL ONLY BE AVAILABLE HERE AND FROM US. NO NFTS. JUST REAL SHIT. TRUST.
           </div>
         </Fade>
-      </div>
+      </section>
 
-      <div className={`${styles.section} ${styles.sixth}`}>
+      <section className={`${styles.section} ${styles.sixth}`}>
         <div className={`${styles.background}`}>
           <Image
             src="/SECTION5_BG.png"
@@ -187,15 +187,15 @@ export default function HomePage() {
         </div>
 
         <div className={`${styles.sectionHeadline}`}>
-          <div>
+          <h2>
             <Image
               src="/SweatTheTech.svg"
               alt="Sweat the tech."
               fill
             />
-          </div>
+          </h2>
         </div>
-      </div>
+      </section>
 
       <div className={`${styles.section} ${styles.seventh}`}>
         <div className={`${styles.background}`}>
