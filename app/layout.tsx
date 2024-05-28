@@ -1,10 +1,10 @@
-import "@/app/globals.css";
-import Header from '@/app/ui/header/header';
-import type { Metadata } from "next";
+import Header from '@/components/header/header';
+import '@/globals.css';
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "$NYC",
-  description: "The SOL of Gotham",
+  title: '$NYC',
+  description: 'The SOL of Gotham',
 };
 
 export default function RootLayout({
@@ -14,6 +14,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link
+          rel="preload"
+          href="/fonts/Roobert-Regular.otf"
+          as="font"
+          type="font/otf"
+          crossOrigin=""
+        />
+      </head>
       <body>
         <Header />
         {children}

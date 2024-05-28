@@ -1,9 +1,9 @@
-import { DESKTOP_WIDTH_MIN, TABLET_WIDTH_MIN } from '@/app/constants/dimension';
-import { Size, WindowSizeCategory } from '@/app/interfaces/dimension';
+import { DESKTOP_WIDTH_MIN, TABLET_WIDTH_MIN } from '@/constants/dimension';
+import { Size, WindowSizeCategory } from '@/interfaces/dimension';
 import { useEffect, useState } from 'react';
 
-export * from '@/app/constants/dimension';
-export * from '@/app/interfaces/dimension';
+export * from '@/constants/dimension';
+export * from '@/interfaces/dimension';
 
 /**
  * Custom hook that gets the {@link WindowSizeCategory}.

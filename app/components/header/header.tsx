@@ -1,7 +1,7 @@
 'use client';
 
-import CopyButton from '@/app/ui/copy-button/copy-button';
-import { useWindowSizeCategory } from '@/app/ui/hooks/dimension.hooks';
+import CopyButton from '@/components/copy-button/copy-button';
+import { useWindowSizeCategory } from '@/hooks/dimension.hooks';
 import clsx from 'clsx';
 import Image from 'next/image';
 import { useCallback, useState } from 'react';
@@ -11,7 +11,7 @@ import { useStickyState } from './header.hooks';
 import styles from './header.module.css';
 
 /**
- * The {@link Header} component, with sticky scrolling.
+ * A header with navigation and sticky scrolling.
  *
  * @returns The {@link Header} component JSX.
  */

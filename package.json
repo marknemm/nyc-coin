@@ -3,14 +3,25 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
     "build": "next build",
+    "clean": "rimraf .next",
+    "clean:all": "npm run clean && rimraf node_modules",
+    "dev": "next dev",
+    "lint": "next lint",
     "start": "next start",
-    "lint": "next lint"
+    "tsc": "tsc"
   },
   "dependencies": {
     "@emotion/react": "^11.11.4",
+    "@project-serum/anchor": "^0.26.0",
+    "@solana/wallet-adapter-base": "^0.9.23",
+    "@solana/wallet-adapter-react": "^0.15.35",
+    "@solana/wallet-adapter-react-ui": "^0.9.35",
+    "@solana/wallet-adapter-wallets": "^0.19.32",
+    "@solana/web3.js": "^1.91.8",
+    "bs58": "^5.0.0",
     "clsx": "^2.1.1",
+    "cross-fetch": "^4.0.0",
     "next": "14.2.3",
     "react": "^18",
     "react-awesome-reveal": "^4.2.11",
@@ -25,6 +36,7 @@
     "eslint": "^8",
     "eslint-config-next": "14.2.3",
     "postcss": "^8",
+    "rimraf": "^5.0.7",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
   }

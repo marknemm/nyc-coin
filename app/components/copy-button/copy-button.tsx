@@ -3,6 +3,12 @@ import { ReactNode, useRef, useState } from 'react';
 import { Tooltip } from 'react-tooltip';
 import styles from './copy-button.module.css';
 
+/**
+ * A button that copies contained text to the clipboard.
+ *
+ * @param props The {@link CopyButtonProps}.
+ * @returns The {@link CopyButton} component JSX.
+ */
 export default function CopyButton ({
   children,
   className = '',
