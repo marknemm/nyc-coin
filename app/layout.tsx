@@ -1,6 +1,7 @@
 import Header from '@/components/header/header';
 import '@/globals.css';
 import type { Metadata } from 'next';
+import AppWalletProvider from './providers/app-wallet-provider';
 
 export const metadata: Metadata = {
   title: '$NYC',
@@ -24,8 +25,10 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <Header />
-        {children}
+        <AppWalletProvider>
+          <Header />
+          {children}
+        </AppWalletProvider>
       </body>
     </html>
   );

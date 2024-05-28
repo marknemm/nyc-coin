@@ -56,6 +56,9 @@ export default function CopyButton ({
   )
 }
 
+/**
+ * The {@link CopyButton} component props.
+ */
 export interface CopyButtonProps {
   children?: ReactNode;
   className?: string;

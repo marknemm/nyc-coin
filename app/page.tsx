@@ -1,8 +1,6 @@
-'use client';
-
+import Fade from '@/components/fade/fade';
 import styles from '@/page.module.css';
 import Image from "next/image";
-import { Fade } from 'react-awesome-reveal';
 
 /**
  * The {@link HomePage} component.
@@ -64,35 +62,32 @@ export default function HomePage() {
         </div>
 
         <Fade
+          className={`${styles.textContent}`}
           direction="right"
           triggerOnce
         >
-          <div className={`${styles.textContent}`}>
-            <div className={styles.title}>
-              <h2>
-                <Image
-                  src="/FuckAnotherMeme.svg"
-                  alt="Fuck another memecoin?"
-                  fill
-                />
-              </h2>
-            </div>
-
-            <div className={styles.description}>
-              <p>
-                NO. WE ARE $NYC, LEGIT NEW YORKERS. TEN TOES DOWN.
-              </p>
-
-              <p>
-                WE’RE BUILDING BEYOND A CORNY, HACK PHOTOSHOP JOB OR HOT, DUMB NARRATIVE.
-              </p>
-
-              <p>
-                THIS INITIATIVE SPEAKS TO THE CALIBER AND CULTURE OF CITY THAT WE LOVE.
-                THE CITY THAT’S BETTER THAN EVERY OTHER. $NYC—THE CITY THAT PLAYS FOR KEEPS.
-              </p>
-            </div>
+          <div className={styles.title}>
+            <h2>
+              <Image
+                src="/FuckAnotherMeme.svg"
+                alt="Fuck another memecoin?"
+                fill
+              />
+            </h2>
           </div>
+
+          <p>
+            NO. WE ARE $NYC, LEGIT NEW YORKERS. TEN TOES DOWN.
+          </p>
+
+          <p>
+            WE’RE BUILDING BEYOND A CORNY, HACK PHOTOSHOP JOB OR HOT, DUMB NARRATIVE.
+          </p>
+
+          <p>
+            THIS INITIATIVE SPEAKS TO THE CALIBER AND CULTURE OF CITY THAT WE LOVE.
+            THE CITY THAT’S BETTER THAN EVERY OTHER. $NYC—THE CITY THAT PLAYS FOR KEEPS.
+          </p>
         </Fade>
       </section>
 
@@ -115,26 +110,23 @@ export default function HomePage() {
           </h2>
         </div>
 
-        <div className={`${styles.description}`}>
-          <Fade
-            direction="left"
-            triggerOnce
-          >
-            <div>
-              <p>
-                RUN ON SOLANA. THE FASTEST AND STURDIEST CHAIN.
-                NO REASON TO ARGUE. NO ABILITY TO RESEARCH.
-                IT JUST IS.
-              </p>
+        <Fade
+          className={`${styles.textContent}`}
+          direction="left"
+          triggerOnce
+        >
+          <p>
+            RUN ON SOLANA. THE FASTEST AND STURDIEST CHAIN.
+            NO REASON TO ARGUE. NO ABILITY TO RESEARCH.
+            IT JUST IS.
+          </p>
 
-              <p>
-                YEAH, YEAH, YEAH, DON’T WORRY.
-                YOU’RE STILL EARLY.
-                CANDLES SO HIGH, THEY’LL SCRAPE THE FUCKING SKY.
-              </p>
-            </div>
-          </Fade>
-        </div>
+          <p>
+            YEAH, YEAH, YEAH, DON’T WORRY.
+            YOU’RE STILL EARLY.
+            CANDLES SO HIGH, THEY’LL SCRAPE THE FUCKING SKY.
+          </p>
+        </Fade>
       </section>
 
       <section className={`${styles.section} ${styles.fourth}`}>
@@ -176,7 +168,10 @@ export default function HomePage() {
           </h2>
         </div>
 
-        <Fade triggerOnce>
+        <Fade
+          className={`${styles.textContent}`}
+          triggerOnce
+        >
           <p>
             THE STRUGGLE IS REAL. PROJECTS ARE MESSY. AND WE CONTINUE BECAUSE IT MATTERS TOO MUCH TO US.
             $NYC WILL EVENTUALLY BE USED TO BUY QUALITY GOODS FROM YOUR HARD-BOILED, ALL-BORO KINGS HERE
@@ -203,6 +198,10 @@ export default function HomePage() {
             />
           </h2>
         </div>
+
+        {/* <div >
+          <WalletMultiButton style={{}} />
+        </div> */}
       </section>
 
       <div className={`${styles.section} ${styles.seventh}`}>
@@ -214,22 +213,24 @@ export default function HomePage() {
           />
         </div>
 
-        <Fade direction="up" triggerOnce className={`${styles.textBlocks}`}>
-          <div className={`${styles.layout}`}>
-            <p>
-              YOU KNOW THE DEAL.
-              DO SOME SHIT.
-              CHANGE YOUR LIFE.
-              FOR STARTERS, HIT US UP.
-              ASK SOME QUESTIONS.
-            </p>
+        <Fade
+          className={`${styles.textContent}`}
+          direction="up"
+          triggerOnce
+        >
+          <p>
+            YOU KNOW THE DEAL.
+            DO SOME SHIT.
+            CHANGE YOUR LIFE.
+            FOR STARTERS, HIT US UP.
+            ASK SOME QUESTIONS.
+          </p>
 
-            <p>
-              BTW, WE ONLY HAVE A TG.
-              DISCORD IS FOR GAMERS—
-              WE’RE BALLERS.
-            </p>
-          </div>
+          <p>
+            BTW, WE ONLY HAVE A TG.
+            DISCORD IS FOR GAMERS—
+            WE’RE BALLERS.
+          </p>
         </Fade>
       </div>
     </main>

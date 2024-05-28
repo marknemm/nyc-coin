@@ -10,6 +10,7 @@
   width: 100%;
   min-height: 100vh;
   padding: 12vw var(--pad-h-max);
+  font-size: var(--font-size-clamp);
 
   & > .background {
     position: absolute;
@@ -42,6 +43,15 @@
       position: relative;
       padding-top: 25%;
     }
+  }
+
+  .textContent {
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-transform: uppercase;
   }
 
   @media only screen and (max-width: 767px) {
@@ -123,13 +133,11 @@
   align-items: flex-end;
 
   .textContent {
-    position: relative;
-    text-transform: uppercase;
     width: 35vw;
 
     .title {
       position: relative;
-      margin-bottom: 3em;
+      margin-bottom: 2.5em;
 
       & > * {
         position: relative;
@@ -140,10 +148,6 @@
           object-position: left center;
         }
       }
-    }
-
-    .description {
-      font-size: var(--font-size-clamp);
     }
   }
 
@@ -190,16 +194,10 @@
     width: 100%;
   }
 
-  .description {
-    position: relative;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  .textContent {
     width: 50%;
     min-height: 100vh;
     padding: min(calc(20% + 2.7em), calc(var(--headline-max-width) / 4)) var(--pad-h-clamp);
-    font-size: var(--font-size-clamp);
   }
 
   @media only screen and (max-width: 991px) {
@@ -210,7 +208,7 @@
       display: none;
     }
 
-    .description {
+    .textContent {
       width: 100%;
       min-height: 0;
       padding-bottom: max(15%, 90px);
@@ -222,7 +220,6 @@
   background: var(--section-orange);
   height: auto;
   min-height: 0;
-  font-size: var(--font-size-clamp);
   padding: 0 var(--pad-h-clamp);
   padding-top: max(8.5%, 60px);
   padding-bottom: max(10%, 72px);
@@ -244,19 +241,11 @@
     }
   }
 
-  .textBlocks {
+  .textContent {
     position: absolute;
-    box-sizing: border-box;
     left: max(38%, 70vh);
     bottom: 100px;
     padding-right: 10%;
-    font-size: var(--font-size-clamp);
-
-    .layout {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
   }
 
   @media only screen and (max-aspect-ratio: 7/6) {
@@ -268,14 +257,14 @@
   }
 
   @media only screen and (max-width: 1200px) {
-    .textBlocks {
+    .textContent {
       padding-right: var(--pad-h-clamp);
     }
   }
 
   @media only screen and (max-width: 1090px) and (max-aspect-ratio: 7/6) {
 
-    .textBlocks {
+    .textContent {
       position: relative;
       left: auto;
       bottom: auto;
@@ -284,7 +273,7 @@
   }
 
   @media only screen and (max-width: 767px) {
-    .textBlocks {
+    .textContent {
       bottom: auto
     }
   }
