@@ -14,33 +14,31 @@ export default function CopyButton ({
   const timeoutRef = useRef<NodeJS.Timeout>();
 
   return (
-    <>
-      <button
-        className={`${styles.copyButton} ${className}`}
-        title="Copy to clipboard"
-        onClick={() => {
-          navigator.clipboard.writeText(copyText ?? '');
+    <button
+      className={`${styles.copyButton} ${className}`}
+      title="Copy to clipboard"
+      onClick={() => {
+        navigator.clipboard.writeText(copyText ?? '');
 
-          clearTimeout(timeoutRef.current);
-          setIsTooltipVisible(true);
-          timeoutRef.current = setTimeout(() => setIsTooltipVisible(false), 1000);
-        }}
-        data-tooltip-id="copy-tooltip"
-      >
-        <span className={`${styles.inner} ${innerClassName}`}>
-          {children ?? copyText}
-        </span>
+        clearTimeout(timeoutRef.current);
+        setIsTooltipVisible(true);
+        timeoutRef.current = setTimeout(() => setIsTooltipVisible(false), 1000);
+      }}
+      data-tooltip-id="copy-tooltip"
+    >
+      <span className={`${styles.inner} ${innerClassName}`}>
+        {children ?? copyText}
+      </span>
 
-        <span className={`${styles.icon} ${iconClassName}`}>
-          <Image
-            src="/Copy_Icon.svg"
-            alt="Copy"
-            width={24}
-            height={24}
-            priority
-          />
-        </span>
-      </button>
+      <span className={`${styles.icon} ${iconClassName}`}>
+        <Image
+          src="/Copy_Icon.svg"
+          alt="Copy"
+          width={24}
+          height={24}
+          priority
+        />
+      </span>
 
       <Tooltip
         id="copy-tooltip"
@@ -48,7 +46,7 @@ export default function CopyButton ({
         isOpen={isTooltipVisible}
         place="bottom"
       />
-    </>
+    </button>
   )
 }
 
