@@ -1,7 +1,7 @@
 'use client';
 
 import CopyButton from '@/components/copy-button/copy-button';
-import { NYC_ID } from '@/constants/currency';
+import { NYC_TA } from '@/constants/currency';
 import { useWindowSizeCategory } from '@/hooks/dimension.hooks';
 import clsx from 'clsx';
 import Image from 'next/image';
@@ -29,11 +29,11 @@ export default function Header() {
       <div className={`${styles.start}`}>
         <CopyButton
           className={`${styles.copyButton}`}
-          copyText={NYC_ID}
+          copyText={NYC_TA}
           innerClassName={`${styles.inner}`}
           iconClassName={`${styles.icon}`}
         >
-          Ca: { NYC_ID }
+          Ca: { NYC_TA }
         </CopyButton>
       </div>
 
@@ -55,7 +55,7 @@ export default function Header() {
         </a>
 
         <a
-          href={`https://jup.ag/swap/SOL-${NYC_ID}`}
+          href={`https://jup.ag/swap/SOL-${NYC_TA}`}
           target="_blank"
           onClick={closeDrawer}
         >

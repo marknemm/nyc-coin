@@ -1,1 +1,1 @@
-export const NYC_ID = 'Gglerd7Qeme5Wa6Zstr2Bmfbanbdesarhpyugnpakyx3';
+export const NYC_TA = 'GGLERd7QeMe5wa6Zstr2BMFbaNbdeSaRhPyugNpaKyx3';
