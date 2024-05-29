@@ -3,4 +3,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: #111116;
+  max-width: 382px;
+  border-radius: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }

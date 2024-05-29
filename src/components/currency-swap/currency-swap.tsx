@@ -1,6 +1,6 @@
 'use client';
 
-import WalletMultiButton from '@/components/wallet-multi-button/wallet-multi-button';
+import { useEffect } from 'react';
 import styles from './currency-swap.module.css';
 
 /**
@@ -12,9 +12,18 @@ import styles from './currency-swap.module.css';
 export default function CurrencySwap({
   className = ''
 }: SwapProps) {
+  useEffect(() => {
+    window.Jupiter.init({
+      displayMode: "integrated",
+      integratedTargetId: "integrated-terminal",
+      endpoint: "https://api.mainnet-beta.solana.com",
+    });
+  }, []);
+
   return(
     <div className={`${styles.currencySwap} ${className}`}>
-      <WalletMultiButton />
+      <div id="integrated-terminal"></div>
+      <script src='https://terminal.jup.ag/main-v2.js' async />
     </div>
   );
 }
