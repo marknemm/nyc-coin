@@ -175,9 +175,9 @@ export default function HomePage() {
           triggerOnce
         >
           <p>
-            THE STRUGGLE IS REAL. PROJECTS ARE MESSY. AND WE CONTINUE BECAUSE IT MATTERS TOO MUCH TO US.
-            $NYC WILL EVENTUALLY BE USED TO BUY QUALITY GOODS FROM YOUR HARD-BOILED, ALL-BORO KINGS HERE
-            AT THE HELM. SHIT THAT WILL ONLY BE AVAILABLE HERE AND FROM US. NO NFTS. JUST REAL SHIT. TRUST.
+            THE STRUGGLE IS REAL. PROJECTS ARE MESSY. AND WE CONTINUE BECAUSE IT MATTERS TOO MUCH TO US.<br />
+            $NYC WILL EVENTUALLY BE USED TO BUY QUALITY GOODS FROM YOUR HARD-BOILED, ALL-BORO KINGS HERE AT THE HELM.<br />
+            SHIT THAT WILL ONLY BE AVAILABLE HERE AND FROM US. NO NFTS. JUST REAL SHIT. TRUST.
           </p>
         </Fade>
       </section>
@@ -202,10 +202,15 @@ export default function HomePage() {
         </div>
 
         <div className={`${styles.content}`}>
+          <p>
+            Don’t take our word for it. Look at the numbers. They Don’t lie.<br/>
+            Unless you’re a scumbag influencer shilling a domestic animal coin.
+          </p>
+
           <h3 className={`${styles.title}`}>
             Get Some $NYC Bags
           </h3>
-          <CurrencySwap className={`${styles.currencySwap}`} />
+          <CurrencySwap />
 
           <h3 className={`${styles.title}`}>
             Very $NYC Numbers

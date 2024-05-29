@@ -9,7 +9,7 @@
   align-items: center;
   width: 100%;
   min-height: 100vh;
-  padding: 12vw var(--pad-h-max);
+  padding: 12vw var(--pad-h-clamp);
   font-size: var(--font-size-clamp);
 
   & > .background {
@@ -52,11 +52,6 @@
     flex-direction: column;
     justify-content: center;
     text-transform: uppercase;
-  }
-
-  @media only screen and (max-width: 767px) {
-    padding-left: var(--pad-h-clamp);
-    padding-right: var(--pad-h-clamp);
   }
 }
 
@@ -132,6 +127,8 @@
 
 .second {
   align-items: flex-end;
+  padding-left: var(--pad-h-max);
+  padding-right: var(--pad-h-max);
 
   .content {
     width: 35vw;
@@ -162,6 +159,8 @@
 
   @media only screen and (max-width: 767px) {
     align-items: center;
+    padding-left: var(--pad-h-clamp);
+    padding-right: var(--pad-h-clamp);
 
     .content {
       width: 100%;
@@ -221,13 +220,24 @@
   background: var(--section-orange);
   height: auto;
   min-height: 0;
-  padding: 0 var(--pad-h-clamp);
   padding-top: max(8.5%, 60px);
   padding-bottom: max(10%, 72px);
+
+  .content {
+    text-align: center;
+
+    @media only screen and (max-width: 1200px) {
+      text-align: left;
+
+      & > * > p > br {
+        display: none;
+      }
+    }
+  }
 }
 
 .sixth {
-  padding-top: min(calc(20% + 2.7em), calc(var(--headline-max-width) / 4));
+  padding-top: min(calc(20% + 2em), calc(var(--headline-max-width) / 4 * .81 + 2em));
 
   .sectionHeadline {
     transform: translateY(-19%);
@@ -236,16 +246,23 @@
 
   .content {
     width: 100%;
+    display: block;
+    text-align: center;
+
+    @media only screen and (max-width: 1200px) {
+      text-align: left;
+
+      & > p > br {
+        display: none;
+      }
+    }
 
     .title {
       position: relative;
       text-align: center;
       margin-bottom: 1em;
       font-size: clamp(1.5em, 2.5vw, 2.5em);
-    }
-
-    .currencySwap {
-      margin-bottom: 3em;
+      margin-top: 3em;
     }
   }
 }
@@ -263,7 +280,7 @@
     position: absolute;
     left: max(38%, 70vh);
     bottom: 100px;
-    padding-right: 10%;
+    padding-right: var(--pad-h-clamp);
   }
 
   @media only screen and (max-aspect-ratio: 7/6) {
@@ -271,12 +288,6 @@
       & > img {
         object-position: right center;
       }
-    }
-  }
-
-  @media only screen and (max-width: 1200px) {
-    .content {
-      padding-right: var(--pad-h-clamp);
     }
   }
 
