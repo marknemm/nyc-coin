@@ -1,6 +1,7 @@
 'use client';
 
 import CopyButton from '@/components/copy-button/copy-button';
+import { NYC_ID } from '@/constants/currency';
 import { useWindowSizeCategory } from '@/hooks/dimension.hooks';
 import clsx from 'clsx';
 import Image from 'next/image';
@@ -16,7 +17,6 @@ import styles from './header.module.css';
  * @returns The {@link Header} component JSX.
  */
 export default function Header() {
-  const copyText = 'Gglerd7Qeme5Wa6Zstr2Bmfbanbdesarhpyugnpakyx3';
   const [sticky] = useStickyState();
   const [drawerOpen, setDrawerOpen] = useState(false);
   const windowSizeCategory = useWindowSizeCategory();
@@ -29,11 +29,11 @@ export default function Header() {
       <div className={`${styles.start}`}>
         <CopyButton
           className={`${styles.copyButton}`}
-          copyText={copyText}
+          copyText={NYC_ID}
           innerClassName={`${styles.inner}`}
           iconClassName={`${styles.icon}`}
         >
-          Ca: { copyText }
+          Ca: { NYC_ID }
         </CopyButton>
       </div>
 
@@ -55,7 +55,7 @@ export default function Header() {
         </a>
 
         <a
-          href="https://jup.ag/swap/SOL-GGLERd7QeMe5wa6Zstr2BMFbaNbdeSaRhPyugNpaKyx3"
+          href={`https://jup.ag/swap/SOL-${NYC_ID}`}
           target="_blank"
           onClick={closeDrawer}
         >

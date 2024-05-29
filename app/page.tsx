@@ -1,6 +1,10 @@
+'use client';
+
+import CurrencySwap from '@/components/currency-swap/currency-swap';
+import DexChart from '@/components/dex-chart/dex-chart';
 import Fade from '@/components/fade/fade';
 import styles from '@/page.module.css';
-import Image from "next/image";
+import Image from 'next/image';
 
 /**
  * The {@link HomePage} component.
@@ -62,7 +66,7 @@ export default function HomePage() {
         </div>
 
         <Fade
-          className={`${styles.textContent}`}
+          className={`${styles.content}`}
           direction="right"
           triggerOnce
         >
@@ -111,7 +115,7 @@ export default function HomePage() {
         </div>
 
         <Fade
-          className={`${styles.textContent}`}
+          className={`${styles.content}`}
           direction="left"
           triggerOnce
         >
@@ -169,7 +173,7 @@ export default function HomePage() {
         </div>
 
         <Fade
-          className={`${styles.textContent}`}
+          className={`${styles.content}`}
           triggerOnce
         >
           <p>
@@ -199,9 +203,17 @@ export default function HomePage() {
           </h2>
         </div>
 
-        {/* <div >
-          <WalletMultiButton style={{}} />
-        </div> */}
+        <div className={`${styles.content}`}>
+          <h3 className={`${styles.title}`}>
+            Get Some $NYC Bags
+          </h3>
+          <CurrencySwap className={`${styles.currencySwap}`} />
+
+          <h3 className={`${styles.title}`}>
+            Very $NYC Numbers
+          </h3>
+          <DexChart className={`${styles.dexChart}`} />
+        </div>
       </section>
 
       <div className={`${styles.section} ${styles.seventh}`}>
@@ -214,7 +226,7 @@ export default function HomePage() {
         </div>
 
         <Fade
-          className={`${styles.textContent}`}
+          className={`${styles.content}`}
           direction="up"
           triggerOnce
         >

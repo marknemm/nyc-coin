@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { ReactNode, useRef, useState } from 'react';
+import { useRef, useState, type PropsWithChildren } from 'react';
 import { Tooltip } from 'react-tooltip';
 import styles from './copy-button.module.css';
 
@@ -59,10 +59,9 @@ export default function CopyButton ({
 /**
  * The {@link CopyButton} component props.
  */
-export interface CopyButtonProps {
-  children?: ReactNode;
+export type CopyButtonProps = PropsWithChildren<{
   className?: string;
   copyText?: string;
   iconClassName?: string;
   innerClassName?: string;
-}
+}>;

@@ -3,8 +3,9 @@
 import { WalletAdapterNetwork } from '@solana/wallet-adapter-base';
 import { ConnectionProvider, WalletProvider } from '@solana/wallet-adapter-react';
 import { WalletModalProvider } from '@solana/wallet-adapter-react-ui';
+import '@solana/wallet-adapter-react-ui/styles.css';
 import { clusterApiUrl } from '@solana/web3.js';
-import { useMemo, type ReactNode } from 'react';
+import { useMemo, type PropsWithChildren } from 'react';
 
 /**
  * An application-wide wallet provider.
@@ -40,11 +41,4 @@ export default function AppWalletProvider({ children }: AppWalletProviderProps) 
 /**
  * The {@link AppWalletProvider} component props.
  */
-export interface AppWalletProviderProps {
-
-  /**
-   * The children to render.
-   */
-  children: ReactNode;
-
-}
+export type AppWalletProviderProps = PropsWithChildren<{}>;

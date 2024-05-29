@@ -9,13 +9,13 @@ const SolWalletMultiButton = dynamic(
 );
 
 /**
- * A fade-in/out animation component.
+ * A web3 wallet connect button.
  *
- * A proxy for {@link RARFade Fade} from the `react-awesome-reveal` module.
+ * A proxy for {@link SolWalletMultiButton WalletMultiButton} from the `@solana/wallet-adapter-react-ui` module.
  *
- * @param props The {@link FadeProps}.
- * @returns The {@link Fade} component JSX.
- * @see {@link RARFade Fade} from the `react-awesome-reveal` module.
+ * @param props The {@link ButtonProps}.
+ * @returns The {@link WalletMultiButton} component JSX.
+ * @see {@link SolWalletMultiButton WalletMultiButton} from the `@solana/wallet-adapter-react-ui` module.
  */
 export default function WalletMultiButton({ children, ...props }: ButtonProps) {
   return (
@@ -25,6 +25,9 @@ export default function WalletMultiButton({ children, ...props }: ButtonProps) {
   );
 }
 
+/**
+ * The {@link WalletMultiButton} component props.
+ */
 export type ButtonProps = PropsWithChildren<{
   className?: string;
   disabled?: boolean;
