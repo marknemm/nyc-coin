@@ -3,8 +3,8 @@
 import CurrencySwap from '@/components/currency-swap/currency-swap';
 import DexChart from '@/components/dex-chart/dex-chart';
 import Fade from '@/components/fade/fade';
-import styles from '@/page.module.css';
 import Image from 'next/image';
+import styles from './page.module.css';
 
 /**
  * The {@link HomePage} component.
@@ -34,24 +34,22 @@ export default function HomePage() {
             />
           </h1>
 
-          <div className={`${styles.subLogos}`}>
-            <div className={styles.gothamContainer}>
-              <Image
-                src="/Sol_Of_Gotham.png"
-                alt="The SOL of Gotham"
-                fill
-                priority
-              />
-            </div>
+          <div className={styles.gothamContainer}>
+            <Image
+              src="/Sol_Of_Gotham.png"
+              alt="The SOL of Gotham"
+              fill
+              priority
+            />
+          </div>
 
-            <div className={styles.interboroContainer}>
-              <Image
-                src="/Interboro_Currency.svg"
-                alt="The only interboro currency"
-                fill
-                priority
-              />
-            </div>
+          <div className={styles.interboroContainer}>
+            <Image
+              src="/Interboro_Currency.svg"
+              alt="The only interboro currency"
+              fill
+              priority
+            />
           </div>
         </div>
       </section>
@@ -212,7 +210,7 @@ export default function HomePage() {
           <h3 className={`${styles.title}`}>
             Very $NYC Numbers
           </h3>
-          <DexChart className={`${styles.dexChart}`} />
+          <DexChart />
         </div>
       </section>
 

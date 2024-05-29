@@ -1,7 +1,7 @@
 {
   "cssModules.camelCase": true,
   "cssModules.pathAlias": {
-    "@": "${workspaceFolder}/app"
+    "@": "${workspaceFolder}/src"
   },
   "editor.quickSuggestions": {
     "strings": "on"

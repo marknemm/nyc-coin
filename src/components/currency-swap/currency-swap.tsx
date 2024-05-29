@@ -13,10 +13,8 @@ export default function CurrencySwap({
   className = ''
 }: SwapProps) {
   return(
-    <div className={`${styles.swap} ${className}`}>
+    <div className={`${styles.currencySwap} ${className}`}>
       <WalletMultiButton />
-
-
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import Header from '@/components/header/header';
-import '@/globals.css';
+import '@/app/globals.css';
 import AppWalletProvider from '@/providers/app-wallet-provider';
 import type { Metadata } from 'next';
 
