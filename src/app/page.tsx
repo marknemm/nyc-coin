@@ -202,10 +202,12 @@ export default function HomePage() {
         </div>
 
         <div className={`${styles.content}`}>
-          <p>
-            Don’t take our word for it. Look at the numbers. They Don’t lie.<br/>
-            Unless you’re a scumbag influencer shilling a domestic animal coin.
-          </p>
+          <Fade triggerOnce>
+            <p>
+              Don’t take our word for it. Look at the numbers. They Don’t lie.<br/>
+              Unless you’re a scumbag influencer shilling a domestic animal coin.
+            </p>
+          </Fade>
 
           <h3 className={`${styles.title}`}>
             Get Some $NYC Bags
