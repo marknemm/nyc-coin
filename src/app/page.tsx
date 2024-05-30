@@ -1,8 +1,8 @@
 'use client';
 
-import CurrencySwap from '@/components/currency-swap/currency-swap';
 import DexChart from '@/components/dex-chart/dex-chart';
 import Fade from '@/components/fade/fade';
+import JupiterTerminal from '@/components/jupiter-terminal/jupiter-terminal';
 import Image from 'next/image';
 import styles from './page.module.css';
 
@@ -212,7 +212,7 @@ export default function HomePage() {
           <h3 className={`${styles.title}`}>
             Get Some $NYC Bags
           </h3>
-          <CurrencySwap />
+          <JupiterTerminal />
 
           <h3 className={`${styles.title}`}>
             Very $NYC Numbers

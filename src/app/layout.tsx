@@ -1,6 +1,7 @@
 import '@/app/globals.css';
 import Header from '@/components/header/header';
 import type { Metadata } from 'next';
+import Script from 'next/script';
 
 export const metadata: Metadata = {
   title: '$NYC',
