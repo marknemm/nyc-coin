@@ -1,53 +1,35 @@
 'use client';
 
 import { JUPITER_TERMINAL_EMBED_SCRIPT } from '@/constants/blockchain';
-import { useLazyLoad } from '@/hooks/lazy.hooks';
-import { initJupiterTerminal } from '@/utils/jupiter-terminal';
 import Script from 'next/script';
-import { useCallback, useRef } from 'react';
+import { useJupiterTerminal } from './jupiter-terminal.hooks';
 import styles from './jupiter-terminal.module.css';
 
-const integratedTargetId = 'integrated-terminal';
-
 /**
- * A widget that swaps one token currency for another.
+ * A Jupiter terminal widget that allows users to swap tokens.
  *
  * @param props The {@link JupiterTerminalProps}.
  * @returns The {@link JupiterTerminal} component JSX.
  */
-export default function CurrencySwap({
+export default function JupiterTerminal({
   className = ''
 }: JupiterTerminalProps) {
-  const elementRef = useRef<HTMLDivElement>(null);
-
-  // Lazy load the Jupiter terminal when it scrolls nearly into view.
-  const canLoad = useLazyLoad({
-    elementRef,
-    callback: () => initJupiterTerminal(integratedTargetId),
-  });
+  const { integratedTargetRef, onEmbedScriptError, onEmbedScriptReady } = useJupiterTerminal();
 
   return(
-    <div className={`${styles.currencySwap} ${className}`}>
-
+    <>
       <div
-        ref={elementRef}
-        id={integratedTargetId}
+        className={`${styles.jupiterTerminal} ${className}`}
+        ref={integratedTargetRef}
       ></div>
 
       <Script
         src={JUPITER_TERMINAL_EMBED_SCRIPT}
-        onLoad={useCallback(() => {
-          if (canLoad) { // If scrolled into view before script loaded, initialize Jupiter terminal immediately.
-            initJupiterTerminal(integratedTargetId);
-          }
-        }, [canLoad])}
-        onError={useCallback((error: any) => {
-          console.error('Jupiter failed to load with error:', error);
-        }, [])}
+        onReady={onEmbedScriptReady}
+        onError={onEmbedScriptError}
         async
       />
-
-    </div>
+    </>
   );
 }
 

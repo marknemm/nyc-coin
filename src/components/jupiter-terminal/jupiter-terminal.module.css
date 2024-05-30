@@ -1,18 +1,10 @@
-.currencySwap {
+.jupiterTerminal {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   background-color: #111116;
+  width: 100%;
   max-width: 382px;
   min-height: 360px;
   border-radius: .5rem;
   margin-left: auto;
   margin-right: auto;
-
-  & > * {
-    position: relative;
-    width: 100%;
-  }
 }
