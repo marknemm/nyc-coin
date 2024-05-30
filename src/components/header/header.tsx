@@ -1,7 +1,7 @@
 'use client';
 
 import CopyButton from '@/components/copy-button/copy-button';
-import { NYC_TA } from '@/constants/currency';
+import { NYC_TA } from '@/constants/blockchain';
 import { useWindowSizeCategory } from '@/hooks/dimension.hooks';
 import clsx from 'clsx';
 import Image from 'next/image';

@@ -1,4 +1,4 @@
-import { NYC_TA } from '@/constants/currency';
+import { NYC_TA } from '@/constants/blockchain';
 import styles from './dex-chart.module.css';
 
 /**

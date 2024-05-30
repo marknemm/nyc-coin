@@ -1,4 +1,4 @@
-import { NYC_TA, SOL_TA } from '@/constants/currency';
+import { NYC_TA, SOL_TA } from '@/constants/blockchain';
 
 /**
  * Initializes the Jupiter terminal.

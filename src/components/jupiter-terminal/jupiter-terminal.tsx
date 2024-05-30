@@ -1,5 +1,6 @@
 'use client';
 
+import { JUPITER_TERMINAL_EMBED_SCRIPT } from '@/constants/blockchain';
 import { useLazyLoad } from '@/hooks/lazy.hooks';
 import { initJupiterTerminal } from '@/utils/jupiter-terminal';
 import Script from 'next/script';
@@ -34,7 +35,7 @@ export default function CurrencySwap({
       ></div>
 
       <Script
-        src='https://terminal.jup.ag/main-v2.js'
+        src={JUPITER_TERMINAL_EMBED_SCRIPT}
         onLoad={useCallback(() => {
           if (canLoad) { // If scrolled into view before script loaded, initialize Jupiter terminal immediately.
             initJupiterTerminal(integratedTargetId);

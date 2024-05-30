@@ -1,7 +1,7 @@
 import '@/app/globals.css';
 import Header from '@/components/header/header';
+import { JUPITER_TERMINAL_EMBED_SCRIPT } from '@/constants/blockchain';
 import type { Metadata } from 'next';
-import Script from 'next/script';
 
 export const metadata: Metadata = {
   title: '$NYC',
@@ -21,6 +21,12 @@ export default function RootLayout({
           href="/fonts/Roobert-Regular.otf"
           as="font"
           type="font/otf"
+          crossOrigin=""
+        />
+        <link
+          rel="preload"
+          href={JUPITER_TERMINAL_EMBED_SCRIPT}
+          as="script"
           crossOrigin=""
         />
       </head>
