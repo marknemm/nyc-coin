@@ -1,6 +1,6 @@
 .jupiterTerminal {
   position: relative;
-  background-color: #111116;
+  background-color: var(--dark-background);
   box-sizing: border-box;
   width: 100%;
   max-width: 382px;

@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 :root {
+  --dark-background: #111116;
   --foreground: #FAF3E4;
   --hover-background: rgba(255, 255, 255, 0.25);
   --hover-foreground: #000;
@@ -27,52 +28,54 @@
   --pad-h-clamp: clamp(var(--pad-h-min), var(--pad-h-scale), var(--pad-h-max));
 }
 
-html,
-body {
-  width: 100%;
-  height: 100%;
-  background-color: #000;
-}
-
-body {
-  color: var(--foreground);
-  overflow-x: hidden;
-}
-
-p {
-  margin-bottom: 1em;
-  line-height: var(--line-height);
-
-  &:last-child {
-    margin-bottom: 0;
-  }
-}
-
-.shimmer {
-  position: relative;
-  overflow: hidden;
-
-  @apply before:absolute
-         before:inset-0
-         before:-translate-x-full
-         before:animate-[shimmer_2s_infinite]
-         before:bg-gradient-to-r
-         before:from-transparent
-         before:via-white/60
-         before:to-transparent;
-}
-
-@media only screen and (max-width: 991px) {
+@layer base {
+  html,
   body {
-    --line-height: 1.2;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
   }
-}
 
-a:hover {
-  color: var(--hover-foreground);
+  body {
+    color: var(--foreground);
+    overflow-x: hidden;
+  }
+
+  p {
+    margin-bottom: 1em;
+    line-height: var(--line-height);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  a:hover {
+    color: var(--hover-foreground);
+  }
+
+  @media only screen and (max-width: 991px) {
+    body {
+      --line-height: 1.2;
+    }
+  }
 }
 
 @layer utilities {
+  .shimmer {
+    position: relative;
+    overflow: hidden;
+
+    @apply before:absolute
+           before:inset-0
+           before:-translate-x-full
+           before:animate-[shimmer_2s_infinite]
+           before:bg-gradient-to-r
+           before:from-transparent
+           before:via-white/60
+           before:to-transparent;
+  }
+
   .text-balance {
     text-wrap: balance;
   }

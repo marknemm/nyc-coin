@@ -11,7 +11,7 @@ export default function DexChart({
   className = ''
 }: DexChartProps) {
   return (
-    <div className={`${styles.dexChart} ${className}`}>
+    <div className={`${styles.dexChart} ${className} shimmer`}>
       <iframe
         className={`${styles.iframe}`}
         onLoad={(event) => {
