@@ -1,10 +1,44 @@
 .jupiterTerminal {
   position: relative;
   background-color: #111116;
+  box-sizing: border-box;
   width: 100%;
   max-width: 382px;
-  min-height: 360px;
+  min-height: 378px;
   border-radius: .5rem;
   margin-left: auto;
   margin-right: auto;
+  overflow: hidden;
+}
+
+.skeleton {
+  position: relative;
+  box-sizing: border-box;
+  padding: 44px 8px 0;
+  width: 100%;
+  height: 100%;
+
+  .input,
+  .output,
+  .swapButton {
+    position: relative;
+    box-sizing: border-box;
+    border-radius: 12px;
+  }
+
+  .input,
+  .output {
+    background-color: rgb(33, 33, 40);
+    height: 116px;
+  }
+
+  .output {
+    margin-top: 8px;
+  }
+
+  .swapButton {
+    background-color: rgb(25, 27, 31);
+    height: 61px;
+    margin-top: 16px;
+  }
 }

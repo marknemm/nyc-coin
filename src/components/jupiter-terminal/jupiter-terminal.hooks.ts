@@ -1,8 +1,6 @@
 import { NYC_TA, SOL_TA, type JUPITER_TERMINAL_EMBED_SCRIPT } from '@/constants/blockchain';
 import { useLazyLoad } from '@/hooks/lazy.hooks';
-import { RefObject, useCallback, useRef } from 'react';
-
-const defaultTerminalId = 'integrated-terminal';
+import { RefObject, useCallback, useRef, useState } from 'react';
 
 /**
  * Custom hook that lazily initializes the Jupiter terminal.
@@ -13,28 +11,35 @@ const defaultTerminalId = 'integrated-terminal';
 export function useJupiterTerminal<
   T_ELEM extends HTMLElement = HTMLDivElement
 >(): UseJupiterTerminalReturn<T_ELEM> {
+  const defaultTerminalId = 'integrated-terminal';
+  const [loaded, setLoaded] = useState(false);
   const integratedTargetRef = useRef<T_ELEM>(null);
 
   // Lazy load the Jupiter terminal when it scrolls nearly into view.
-  const canLoad = useLazyLoad({
+  useLazyLoad({
     elementRef: integratedTargetRef,
-    callback: () => initJupiterTerminal(integratedTargetRef.current?.id ?? defaultTerminalId),
+    callback: () => setLoaded(
+      initJupiterTerminal(integratedTargetRef.current?.id ?? defaultTerminalId)
+    ),
   });
 
   // Callback to initialize Jupiter terminal when the embed script is ready if already scrolled into view.
   return {
     integratedTargetRef,
+    loaded,
     onEmbedScriptError: useCallback((error: any) => {
-      console.error('Jupiter failed to load with error:', error);
+      console.error('Jupiter terminal embed script load failed with error:', error);
     }, []),
     onEmbedScriptReady: useCallback(() => {
       if (!integratedTargetRef.current?.id) {
         integratedTargetRef.current?.setAttribute('id', defaultTerminalId);
       }
-      if (canLoad) {
-        initJupiterTerminal(integratedTargetRef.current?.id ?? '');
+      if (integratedTargetRef.current?.dataset.canLoad === 'true') {
+        setLoaded(
+          initJupiterTerminal(integratedTargetRef.current?.id ?? '')
+        );
       }
-    }, [canLoad, integratedTargetRef]),
+    }, [integratedTargetRef]),
   };
 }
 
@@ -75,6 +80,11 @@ export interface UseJupiterTerminalReturn<T_ELEM extends HTMLElement = HTMLDivEl
    * The reference to the integrated terminal target element.
    */
   integratedTargetRef: RefObject<T_ELEM>;
+
+  /**
+   * Whether the Jupiter terminal is loaded.
+   */
+  loaded: boolean;
 
   /**
    * A memoized function that should be invoked when the {@link JUPITER_TERMINAL_EMBED_SCRIPT} had an error while loading.

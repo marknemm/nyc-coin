@@ -14,14 +14,22 @@ import styles from './jupiter-terminal.module.css';
 export default function JupiterTerminal({
   className = ''
 }: JupiterTerminalProps) {
-  const { integratedTargetRef, onEmbedScriptError, onEmbedScriptReady } = useJupiterTerminal();
+  const { integratedTargetRef, loaded, onEmbedScriptError, onEmbedScriptReady } = useJupiterTerminal();
 
   return(
     <>
       <div
         className={`${styles.jupiterTerminal} ${className}`}
         ref={integratedTargetRef}
-      ></div>
+      >
+        {!loaded && (
+          <div className={`${styles.skeleton}`}>
+            <div className={`${styles.input} shimmer`} />
+            <div className={`${styles.output} shimmer`} />
+            <div className={`${styles.swapButton} shimmer`} />
+          </div>
+        )}
+      </div>
 
       <Script
         src={JUPITER_TERMINAL_EMBED_SCRIPT}

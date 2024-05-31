@@ -12,6 +12,13 @@ const config: Config = {
         sans: ['Roobert', ...defaultTheme.fontFamily.sans],
         serif: ['MADE Avenue', ...defaultTheme.fontFamily.serif],
       },
+      keyframes: {
+        shimmer: {
+          '100%': {
+            transform: 'translateX(100%)',
+          },
+        },
+      },
     },
   },
   plugins: [

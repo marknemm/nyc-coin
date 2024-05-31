@@ -18,20 +18,21 @@ export function useLazyLoad({
 }: UseLazyLoadConfig): boolean {
   const [canLoad, setCanLoad] = useState(false);
 
-  const onScrollIntoView = () => {
-    setCanLoad(true);
-    callback?.();
-  };
-
   useEffect(() => {
-    if (typeof IntersectionObserver === 'undefined') {
-      onScrollIntoView(); // Load immediately if IntersectionObserver is not supported
-      return;
-    }
-
     const observedElement = elementRef.current;
     if (!observedElement) {
       throw new Error('elementRef config is required for lazy loading');
+    }
+
+    const onScrollIntoView = () => {
+      observedElement.dataset.canLoad = 'true';
+      setCanLoad(true);
+      callback?.();
+    };
+
+    if (typeof IntersectionObserver === 'undefined') {
+      onScrollIntoView(); // Load immediately if IntersectionObserver is not supported
+      return;
     }
 
     const observer = new IntersectionObserver(
@@ -55,7 +56,7 @@ export function useLazyLoad({
       observer.unobserve(observedElement);
     };
   }, [elementRef, rootMargin, rootRef, threshold]); // eslint-disable-line react-hooks/exhaustive-deps
-  // TODO: Use useEffectEvent for onScrollIntoView once it becomes part of stable React.
+  // TODO: Use useEffectEvent for callback once it becomes part of stable React.
 
   return canLoad;
 }
