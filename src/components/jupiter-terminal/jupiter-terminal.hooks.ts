@@ -1,4 +1,4 @@
-import { NYC_TA, SOL_TA, type JUPITER_TERMINAL_EMBED_SCRIPT } from '@/constants/blockchain';
+import { type JUPITER_TERMINAL_EMBED_SCRIPT } from '@/constants/jupiter';
 import { useLazyLoad } from '@/hooks/lazy.hooks';
 import { RefObject, useCallback, useRef, useState } from 'react';
 
@@ -54,16 +54,16 @@ function initJupiterTerminal(integratedTargetId: string): boolean {
   window.Jupiter?.init({
     displayMode: 'integrated',
     integratedTargetId,
-    endpoint: 'https://api.mainnet-beta.solana.com',
+    endpoint: `${process.env.NEXT_PUBLIC_RPC_ENDPOINT_URL}/${process.env.NEXT_PUBLIC_RPC_API_KEY}`,
     strictTokenList: false,
-    containerStyles: {
-      maxWidth: '100%',
-    },
     formProps: {
       fixedOutputMint: true,
-      initialInputMint: SOL_TA,
-      initialOutputMint: NYC_TA,
+      initialInputMint: process.env.NEXT_PUBLIC_DEFAULT_SOURCE_TA,
+      initialOutputMint: process.env.NEXT_PUBLIC_NYC_TA,
     },
+    onSwapError: (error: any) => {
+      console.error('Jupiter terminal swap error:', error);
+    }
   });
 
   return !!window.Jupiter;

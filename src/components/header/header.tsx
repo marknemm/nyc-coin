@@ -1,7 +1,6 @@
 'use client';
 
 import CopyButton from '@/components/copy-button/copy-button';
-import { NYC_TA } from '@/constants/blockchain';
 import { useWindowSizeCategory } from '@/hooks/dimension.hooks';
 import clsx from 'clsx';
 import Image from 'next/image';
@@ -26,20 +25,25 @@ export default function Header() {
 
   const navElement = (
     <>
+      {/* <ReCAPTCHA
+        sitekey="6LcnyO0pAAAAAGH7KBL3BIcNBiw5TJohKDr4nvfe"
+        size="invisible"
+      /> */}
+
       <div className={`${styles.start}`}>
         <CopyButton
           className={`${styles.copyButton}`}
-          copyText={NYC_TA}
+          copyText={process.env.NEXT_PUBLIC_NYC_TA}
           innerClassName={`${styles.inner}`}
           iconClassName={`${styles.icon}`}
         >
-          Ca: { NYC_TA }
+          Ca: { process.env.NEXT_PUBLIC_NYC_TA }
         </CopyButton>
       </div>
 
       <nav className={`${styles.end}`}>
         <a
-          href="https://www.dextools.io/app/en/solana/pair-explorer/7p5yMdMJLQX2QCM7wD3sm6G7bgsKFvkUCZMpVRtxRQcj?t=1716573652638"
+          href={`https://www.dextools.io/app/en/solana/pair-explorer/${process.env.NEXT_PUBLIC_TOKEN_PAIR_ID}`}
           target="_blank"
           onClick={closeDrawer}
         >
@@ -47,7 +51,7 @@ export default function Header() {
         </a>
 
         <a
-          href="https://dexscreener.com/solana/7p5ymdmjlqx2qcm7wd3sm6g7bgskfvkuczmpvrtxrqcj"
+          href={`https://dexscreener.com/solana/${process.env.NEXT_PUBLIC_TOKEN_PAIR_ID}`}
           target="_blank"
           onClick={closeDrawer}
         >
@@ -55,7 +59,7 @@ export default function Header() {
         </a>
 
         <a
-          href={`https://jup.ag/swap/SOL-${NYC_TA}`}
+          href={`https://jup.ag/swap/SOL-${process.env.NEXT_PUBLIC_NYC_TA}`}
           target="_blank"
           onClick={closeDrawer}
         >

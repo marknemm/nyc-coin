@@ -1,4 +1,3 @@
-import { NYC_TA } from '@/constants/blockchain';
 import styles from './dex-chart.module.css';
 
 /**
@@ -18,7 +17,7 @@ export default function DexChart({
           (event.target as HTMLElement)?.classList.add(styles.loaded);
         }}
         loading="lazy"
-        src={`https://dexscreener.com/solana/${NYC_TA}?embed=1&theme=dark`}
+        src={`https://dexscreener.com/solana/${process.env.NEXT_PUBLIC_NYC_TA}?embed=1&theme=dark`}
         title="Solana DEX Screener"
       />
     </div>

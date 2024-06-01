@@ -1,6 +1,6 @@
 'use client';
 
-import { JUPITER_TERMINAL_EMBED_SCRIPT } from '@/constants/blockchain';
+import { JUPITER_TERMINAL_EMBED_SCRIPT } from '@/constants/jupiter';
 import Script from 'next/script';
 import { useJupiterTerminal } from './jupiter-terminal.hooks';
 import styles from './jupiter-terminal.module.css';

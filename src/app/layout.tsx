@@ -1,6 +1,7 @@
 import '@/app/globals.css';
 import Header from '@/components/header/header';
-import { JUPITER_TERMINAL_EMBED_SCRIPT } from '@/constants/blockchain';
+import { JUPITER_TERMINAL_EMBED_SCRIPT } from '@/constants/jupiter';
+import { GoogleTagManager } from '@next/third-parties/google';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -16,6 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <GoogleTagManager gtmId="G-PJNM5Q1Z7W" />
         <link
           rel="preload"
           href="/fonts/Roobert-Regular.otf"
