@@ -1,6 +1,7 @@
 import '@/app/globals.css';
 import Header from '@/components/header/header';
 import { JUPITER_TERMINAL_EMBED_SCRIPT } from '@/constants/jupiter';
+import VhProvider from '@/contexts/vh-provider';
 import { GoogleTagManager } from '@next/third-parties/google';
 import type { Metadata } from 'next';
 
@@ -33,6 +34,7 @@ export default function RootLayout({
         />
       </head>
       <body>
+        <VhProvider />
         <Header />
         {children}
       </body>
