@@ -176,8 +176,8 @@ export default function HomePage() {
           triggerOnce
         >
           <p>
-            THE STRUGGLE IS REAL. PROJECTS ARE MESSY. AND WE CONTINUE BECAUSE IT MATTERS TOO MUCH TO US.<br />
-            $NYC WILL EVENTUALLY BE USED TO BUY QUALITY GOODS FROM YOUR HARD-BOILED, ALL-BORO KINGS HERE AT THE HELM.<br />
+            THE STRUGGLE IS REAL. PROJECTS ARE MESSY. AND WE CONTINUE BECAUSE IT MATTERS TOO MUCH TO US. <br />
+            $NYC WILL EVENTUALLY BE USED TO BUY QUALITY GOODS FROM YOUR HARD-BOILED, ALL-BORO KINGS HERE AT THE HELM. <br />
             SHIT THAT WILL ONLY BE AVAILABLE HERE AND FROM US. NO NFTS. JUST REAL SHIT. TRUST.
           </p>
         </Fade>
@@ -208,7 +208,7 @@ export default function HomePage() {
             triggerOnce
           >
             <p>
-              Don’t take our word for it. Look at the numbers. They Don’t lie.<br/>
+              Don’t take our word for it. Look at the numbers. They Don’t lie. <br/>
               Unless you’re a scumbag influencer shilling a domestic animal coin.
             </p>
           </Fade>

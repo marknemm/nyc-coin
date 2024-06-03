@@ -224,7 +224,7 @@
   background: var(--section-orange);
   height: auto;
   min-height: 0;
-  padding-top: max(8.5%, 54px);
+  padding-top: max(8.5%, 60px);
   padding-bottom: max(10%, 72px);
 
   .content {
