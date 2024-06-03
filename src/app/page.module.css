@@ -224,8 +224,8 @@
   background: var(--section-orange);
   height: auto;
   min-height: 0;
-  padding-top: max(8.5%, 60px);
-  padding-bottom: max(10%, 72px);
+  padding-top: min(calc(6% + 2em), 138px);
+  padding-bottom: min(calc(6% + 3em), calc(138px + 1em));
 
   .content {
     text-align: center;
@@ -241,7 +241,7 @@
 }
 
 .sixth {
-  padding-top: min(calc(20% + 2em), calc(var(--headline-max-width) / 4 * .81 + 2em));
+  padding-top: min(calc(20% + 2em), 323px);
 
   .sectionHeadline {
     transform: translateY(-19%);
