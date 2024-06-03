@@ -6,19 +6,21 @@ import { DESKTOP_WIDTH_MIN } from './dimension.hooks';
  */
 export function useVh() {
   const intervalRef = useRef<NodeJS.Timeout>();
+  const prevInnerHeightRef = useRef(0);
 
   useEffect(() => {
     const setVh = () => {
       clearInterval(intervalRef.current);
+      prevInnerHeightRef.current = window.innerHeight;
       let ticks = 0;
 
       intervalRef.current = setInterval(() => {
         const vh = window.innerHeight * 0.01;
         document.documentElement.style.setProperty('--vh', `${vh}px`);
-        if (++ticks >= 20) {
+        if (++ticks >= 10 || window.innerHeight === prevInnerHeightRef.current) {
           clearInterval(intervalRef.current);
         }
-      }, 100);
+      }, 200);
     };
 
     // Check if the browser is mobile firefox.
