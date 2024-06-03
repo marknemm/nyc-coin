@@ -282,7 +282,7 @@
 
   .content {
     position: absolute;
-    left: max(38%, calc(var(--vh, 1vh) * 70));
+    padding-left: max(38%, calc(var(--vh, 1vh) * 70));
     bottom: 100px;
     padding-right: var(--pad-h-clamp);
     overflow: visible;
@@ -300,9 +300,9 @@
 
     .content {
       position: relative;
-      left: auto;
-      bottom: auto;
+      padding-left: 0;
       padding-right: 0;
+      bottom: auto;
     }
   }
 
