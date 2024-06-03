@@ -224,7 +224,7 @@
   background: var(--section-orange);
   height: auto;
   min-height: 0;
-  padding-top: max(8.5%, 60px);
+  padding-top: max(8.5%, 54px);
   padding-bottom: max(10%, 72px);
 
   .content {
@@ -233,7 +233,7 @@
     @media only screen and (max-width: 1200px) {
       text-align: left;
 
-      & > * > p > br {
+      .fadeText > p > br {
         display: none;
       }
     }
@@ -256,7 +256,7 @@
     @media only screen and (max-width: 1200px) {
       text-align: left;
 
-      & > * > * > p > br {
+      .fadeText > p > br {
         display: none;
       }
     }
@@ -285,6 +285,7 @@
     left: max(38%, calc(var(--vh, 1vh) * 70));
     bottom: 100px;
     padding-right: var(--pad-h-clamp);
+    overflow: visible;
   }
 
   @media only screen and (max-aspect-ratio: 7/6) {

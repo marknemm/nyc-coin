@@ -64,7 +64,7 @@ export default function HomePage() {
         </div>
 
         <Fade
-          className={`${styles.content}`}
+          containerClassName={`${styles.content}`}
           direction="right"
           triggerOnce
         >
@@ -113,7 +113,7 @@ export default function HomePage() {
         </div>
 
         <Fade
-          className={`${styles.content}`}
+          containerClassName={`${styles.content}`}
           direction="left"
           triggerOnce
         >
@@ -171,7 +171,8 @@ export default function HomePage() {
         </div>
 
         <Fade
-          className={`${styles.content}`}
+          containerClassName={`${styles.content}`}
+          innerClassName={`${styles.fadeText}`}
           triggerOnce
         >
           <p>
@@ -202,7 +203,10 @@ export default function HomePage() {
         </div>
 
         <div className={`${styles.content}`}>
-          <Fade triggerOnce>
+          <Fade
+            innerClassName={`${styles.fadeText}`}
+            triggerOnce
+          >
             <p>
               Don’t take our word for it. Look at the numbers. They Don’t lie.<br/>
               Unless you’re a scumbag influencer shilling a domestic animal coin.
@@ -231,7 +235,7 @@ export default function HomePage() {
         </div>
 
         <Fade
-          className={`${styles.content}`}
+          containerClassName={`${styles.content}`}
           direction="up"
           triggerOnce
         >
