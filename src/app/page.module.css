@@ -10,7 +10,7 @@
   width: 100%;
   min-height: calc(var(--vh, 1vh) * 100);
   min-height: 100lvh;
-  padding: 12vw var(--pad-h-clamp);
+  padding: 10vw var(--pad-h-clamp);
   font-size: var(--font-size-clamp);
 
   & > .background {
@@ -128,11 +128,13 @@
 
 .second {
   align-items: flex-end;
-  padding-left: var(--pad-h-max);
-  padding-right: var(--pad-h-max);
+  padding-left: 0;
+  padding-right: 0;
 
   .content {
-    width: 35vw;
+    width: 45vw;
+    padding-left: 0;
+    padding-right: var(--pad-h-max);
 
     .title {
       position: relative;
@@ -140,7 +142,8 @@
 
       & > * {
         position: relative;
-        padding-top: 37%;
+        box-sizing: border-box;
+        padding-top: min(40%, calc(var(--headline-max-width) * 0.25));
 
         & > img {
           object-fit: contain;
@@ -152,6 +155,8 @@
 
   @media only screen and (max-width: 991px) {
     .content {
+      padding-right: var(--pad-h-clamp);
+
       .title {
         margin-bottom: 2em;
       }
@@ -160,11 +165,10 @@
 
   @media only screen and (max-width: 767px) {
     align-items: center;
-    padding-left: var(--pad-h-clamp);
-    padding-right: var(--pad-h-clamp);
 
     .content {
       width: 100%;
+      padding-left: var(--pad-h-clamp);
     }
   }
 }
@@ -274,7 +278,7 @@
 
   .background {
     & > img {
-      object-position: left center;
+      object-position: left top;
     }
   }
 
@@ -288,7 +292,7 @@
   @media only screen and (max-aspect-ratio: 7/6) {
     .background {
       & > img {
-        object-position: right center;
+        object-position: right top;
       }
     }
   }
@@ -305,6 +309,7 @@
 
   @media only screen and (max-width: 767px) {
     .content {
+      position: relative;
       bottom: auto
     }
   }

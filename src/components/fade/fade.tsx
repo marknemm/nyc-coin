@@ -1,6 +1,7 @@
 'use client';
 
 import { Fade as RARFade, type FadeProps } from 'react-awesome-reveal';
+import styles from './fade.module.css';
 export { type FadeProps };
 
 /**
@@ -14,10 +15,12 @@ export { type FadeProps };
  */
 export default function Fade({ children, ...props }: FadeProps) {
   return (
-    <RARFade {...props}>
-      <div>
-        {children}
-      </div>
-    </RARFade>
+    <div className={`${styles.container}`}>
+      <RARFade {...props}>
+        <div>
+          {children}
+        </div>
+      </RARFade>
+    </div>
   );
 }
