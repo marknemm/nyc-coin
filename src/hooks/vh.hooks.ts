@@ -13,7 +13,7 @@ export function useVh() {
 
     // Check if the browser is mobile firefox.
     // TODO: Replace with use of lvh/svh units when supported by Firefox.
-    if (/firefox|mozilla/i.test(navigator.userAgent) && screen.width < DESKTOP_WIDTH_MIN) {
+    if (/firefox|fxios/ii.test(navigator.userAgent) && screen.width < DESKTOP_WIDTH_MIN) {
       setVh();
       window.addEventListener('orientationchange', setVh);
     }
