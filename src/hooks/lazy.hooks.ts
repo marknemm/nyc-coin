@@ -13,7 +13,7 @@ export function useLazyLoad({
   callback,
   elementRef,
   rootRef,
-  rootMargin = '100% 0px',
+  rootMargin = '50% 0px',
   threshold,
 }: UseLazyLoadConfig): boolean {
   const [canLoad, setCanLoad] = useState(false);
