@@ -18,7 +18,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <GoogleTagManager gtmId="G-PJNM5Q1Z7W" />
         <link
           rel="preload"
           href="/fonts/Roobert-Regular.otf"
@@ -33,6 +32,7 @@ export default function RootLayout({
           crossOrigin=""
         />
       </head>
+      <GoogleTagManager gtmId="G-PJNM5Q1Z7W" />
       <body>
         <VhProvider />
         <Header />
