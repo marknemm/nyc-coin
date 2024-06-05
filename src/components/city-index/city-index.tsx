@@ -13,7 +13,6 @@ export default function CityIndex() {
       <table
         className={`${styles.table}`}
         ref={cityIndexRef}
-        title="City Index Table"
       >
         <thead>
           <tr>

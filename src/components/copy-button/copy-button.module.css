@@ -1,14 +1,16 @@
 .copyButton {
   position: relative;
+  display: inline-flex;
   text-align: left;
   white-space: nowrap;
   max-width: 100%;
 
   .inner {
     position: relative;
-    display: inline-block;
+    flex: 1;
     overflow: hidden;
     text-overflow: ellipsis;
+    white-space: nowrap;
     text-align: left;
     max-width: calc(100% - 1em - 10px);
   }

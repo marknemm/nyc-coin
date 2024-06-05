@@ -1,6 +1,6 @@
 .header {
   --padding-top-absolute: 50px;
-  --padding-top-sticky: 10px;
+  --padding-top-sticky: 5px;
   --padding-horizontal: 50px;
   --foregound: #fff;
 
@@ -22,24 +22,15 @@
     position: fixed;
     padding: var(--padding-top-sticky) var(--padding-horizontal) 0;
     pointer-events: none;
+    background-color: rgba(0, 0, 0, 0.33);
+    max-height: 40px;
+    font-size: 14px;
 
     & > :global(.EZDrawer),
     .drawerToggleButton,
     .start > *,
     .end > * {
       pointer-events: auto;
-    }
-
-    &,
-    .copyButton {
-      text-shadow: var(--text-shadow);
-    }
-
-    .start > *,
-    .end .navLink {
-      &:hover {
-        text-shadow: none;
-      }
     }
 
     /* Sticky animation (header slides in from top). */
@@ -69,7 +60,6 @@
 .end > .navLink {
   border-radius: 5px;
   padding: 3px 10px;
-  height: 32px;
 
   &:hover {
     background-color: var(--hover-background);
@@ -107,11 +97,7 @@
 
     &.sticky {
       transition: none;
-
-      &,
-      .copyButton {
-        text-shadow: none;
-      }
+      background-color: transparent;
     }
   }
 

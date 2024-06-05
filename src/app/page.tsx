@@ -205,6 +205,11 @@ export default function HomePage() {
           </Fade>
 
           <h3 className={`${styles.title}`}>
+            $City Index
+          </h3>
+          <CityIndex />
+
+          <h3 className={`${styles.title}`}>
             Get Some $NYC Bags
           </h3>
           <JupiterTerminal />
@@ -213,11 +218,6 @@ export default function HomePage() {
             Very $NYC Numbers
           </h3>
           <DexChart />
-
-          <h3 className={`${styles.title}`}>
-            $City Index
-          </h3>
-          <CityIndex />
         </div>
       </section>
 
