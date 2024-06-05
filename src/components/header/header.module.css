@@ -33,6 +33,10 @@
       pointer-events: auto;
     }
 
+    .start > * {
+      max-width: 274px;
+    }
+
     /* Sticky animation (header slides in from top). */
     transition: top 0.25s ease-in-out;
     top: 0;
@@ -98,6 +102,11 @@
     &.sticky {
       transition: none;
       background-color: transparent;
+      font-size: 1em;
+
+      .start > * {
+        max-width: 100%;
+      }
     }
   }
 

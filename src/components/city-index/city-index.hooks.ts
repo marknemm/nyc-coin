@@ -17,7 +17,13 @@ export function useCityTokens<
   const cityIndexRef = useRef<T_ELEM>(null);
   const [error, setError] = useState<string>('');
   const [loading, setLoading] = useState<boolean>(false);
-  const [tokens, setTokens] = useState<TokenDisplayData[]>([]);
+  const [tokens, setTokens] = useState<TokenDisplayData[]>(() => {
+    const initTokens = [new TokenDisplayData({ baseToken: { address: process.env.NEXT_PUBLIC_NYC_TA ?? '' } })];
+    for (const cityTa of (process.env.NEXT_PUBLIC_CITY_TAS ?? '').split(',')) {
+      initTokens.push(new TokenDisplayData({ baseToken: { address: cityTa } }));
+    }
+    return initTokens;
+  });
 
   useLazyLoad({
     elementRef: cityIndexRef,

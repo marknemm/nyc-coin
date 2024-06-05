@@ -6,7 +6,7 @@
   justify-content: center;
   flex-direction: column;
   height: calc((var(--vh, 1vh) * 100) - 5em);
-  min-height: 460px;
+  min-height: 800px;
   background-color: var(--dark-background);
 
   .barContainer {

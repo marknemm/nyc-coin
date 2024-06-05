@@ -1,11 +1,9 @@
 .container {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   background-color: var(--dark-background);
   text-transform: none;
+  max-height: max(calc((var(--vh, 1vh) * 100) - 5em), 800px);
+  overflow-y: auto;
 }
 
 .table {
@@ -43,6 +41,9 @@
   }
 
   > thead {
+    position: sticky;
+    z-index: 1;
+    top: 0;
     background-color: var(--dark-background-lighter);
     color: #aaa;
     font-size: 12px;
@@ -62,6 +63,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    min-height: 50px;
   }
 
   .tokenImage {
@@ -101,6 +103,10 @@
       }
     }
 
+    .coinContent {
+      min-height: 175px;
+    }
+
     .tokenImage {
       margin-right: 40px;
     }
@@ -110,7 +116,7 @@
       margin-top: 1em;
 
       > tbody > tr > th {
-        padding-right: 20px;
+        padding-right: 15px;
         color: #aaa;
       }
 
