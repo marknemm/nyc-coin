@@ -1,5 +1,4 @@
-'use client';
-
+import CityIndex from '@/components/city-index/city-index';
 import DexChart from '@/components/dex-chart/dex-chart';
 import Fade from '@/components/fade/fade';
 import JupiterTerminal from '@/components/jupiter-terminal/jupiter-terminal';
@@ -214,6 +213,11 @@ export default function HomePage() {
             Very $NYC Numbers
           </h3>
           <DexChart />
+
+          <h3 className={`${styles.title}`}>
+            $City Index
+          </h3>
+          <CityIndex />
         </div>
       </section>
 

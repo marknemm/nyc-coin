@@ -55,8 +55,7 @@ export function useLazyLoad({
     return () => {
       observer.unobserve(observedElement);
     };
-  }, [elementRef, rootMargin, rootRef, threshold]); // eslint-disable-line react-hooks/exhaustive-deps
-  // TODO: Use useEffectEvent for callback once it becomes part of stable React.
+  }, [callback, elementRef, rootMargin, rootRef, threshold]);
 
   return canLoad;
 }

@@ -28,7 +28,7 @@
 
   .input,
   .output {
-    background-color: rgb(33, 33, 40);
+    background-color: var(--dark-background-lighter);
     height: 116px;
   }
 

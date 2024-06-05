@@ -3,10 +3,10 @@
 import CopyButton from '@/components/copy-button/copy-button';
 import { useWindowSizeCategory } from '@/hooks/dimension.hooks';
 import clsx from 'clsx';
-import Image from 'next/image';
 import { useCallback, useState } from 'react';
 import Drawer from 'react-modern-drawer';
 import 'react-modern-drawer/dist/index.css';
+import SocialLink from '../social-link/social-link';
 import { useStickyState } from './header.hooks';
 import styles from './header.module.css';
 
@@ -43,6 +43,7 @@ export default function Header() {
 
       <nav className={`${styles.end}`}>
         <a
+          className={`${styles.navLink}`}
           href={`https://www.dextools.io/app/en/solana/pair-explorer/${process.env.NEXT_PUBLIC_TOKEN_PAIR_ID}`}
           target="_blank"
           onClick={closeDrawer}
@@ -51,6 +52,7 @@ export default function Header() {
         </a>
 
         <a
+          className={`${styles.navLink}`}
           href={`https://dexscreener.com/solana/${process.env.NEXT_PUBLIC_TOKEN_PAIR_ID}`}
           target="_blank"
           onClick={closeDrawer}
@@ -59,6 +61,7 @@ export default function Header() {
         </a>
 
         <a
+          className={`${styles.navLink}`}
           href={`https://jup.ag/swap/SOL-${process.env.NEXT_PUBLIC_NYC_TA}`}
           target="_blank"
           onClick={closeDrawer}
@@ -66,37 +69,21 @@ export default function Header() {
           Buy
         </a>
 
-        <a
-          className={`${styles.iconLink}`}
+        <SocialLink
+          className={`${styles.socialLink}`}
           href="https://twitter.com/nyc_solana"
           title="Twitter"
-          target="_blank"
+          imgPriority
           onClick={closeDrawer}
-        >
-          <Image
-            src="/Tw.png"
-            alt="$NYC Logo"
-            width={24}
-            height={24}
-            priority
-          />
-        </a>
+        />
 
-        <a
-          className={`${styles.iconLink}`}
+        <SocialLink
+          className={`${styles.socialLink}`}
           href="https://t.me/+VwqG2w_hEddmYzQ0"
           title="Telegram"
-          target="_blank"
+          imgPriority
           onClick={closeDrawer}
-        >
-          <Image
-            src="/TG.png"
-            alt="$NYC Logo"
-            width={24}
-            height={24}
-            priority
-          />
-        </a>
+        />
       </nav>
     </>
   );
