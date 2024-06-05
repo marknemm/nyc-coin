@@ -1,5 +1,7 @@
 'use client';
 
+import clsx from 'clsx';
+import { useState } from 'react';
 import styles from './dex-chart.module.css';
 
 /**
@@ -11,13 +13,26 @@ import styles from './dex-chart.module.css';
 export default function DexChart({
   className = ''
 }: DexChartProps) {
+  const [loaded, setLoaded] = useState(false);
+
   return (
-    <div className={`${styles.dexChart} ${className} shimmer`}>
+    <div className={clsx(
+      `${styles.dexChart} ${className} shimmer`,
+      {
+        [styles.loaded]: loaded
+      }
+    )}>
+      <div className={`${styles.barContainer}`}>
+        <div className={`${styles.bar}`}></div>
+        <div className={`${styles.bar}`}></div>
+        <div className={`${styles.bar}`}></div>
+        <div className={`${styles.bar}`}></div>
+        <div className={`${styles.bar}`}></div>
+      </div>
+
       <iframe
         className={`${styles.iframe}`}
-        onLoad={(event) => {
-          (event.target as HTMLElement)?.classList.add(styles.loaded);
-        }}
+        onLoad={() => setLoaded(true)}
         loading="lazy"
         src={`https://dexscreener.com/solana/${process.env.NEXT_PUBLIC_NYC_TA}?embed=1&theme=dark`}
         title="Solana DEX Screener"

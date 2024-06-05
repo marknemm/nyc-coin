@@ -2,10 +2,67 @@
   position: relative;
   box-sizing: border-box;
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
   height: calc((var(--vh, 1vh) * 100) - 5em);
   min-height: 460px;
   background-color: var(--dark-background);
+
+  .barContainer {
+    position: absolute;
+    display: flex;
+    align-items: flex-end; /* Align bars to the bottom */
+    justify-content: space-around;
+    height: 100%;
+    width: 80%;
+    max-width: 500px;
+    max-height: 600px;
+
+    .bar {
+      width: 15%;
+      background-color: var(--dark-background-lighter);
+      margin: 0 10px;
+      position: relative;
+      transform-origin: bottom;
+      will-change: transform;
+
+      &:nth-child(1) {
+        height: 85%;
+        animation: growShrinkBar 1s infinite alternate cubic-bezier(0.42, 0, 0.58, 1);
+      }
+
+      &:nth-child(2) {
+        height: 80%;
+        animation: growShrinkBar .7s infinite alternate cubic-bezier(0.42, 0, 0.58, 1);
+      }
+
+      &:nth-child(3) {
+        height: 90%;
+        animation: growShrinkBar 1.2s infinite alternate cubic-bezier(0.42, 0, 0.58, 1);
+      }
+
+      &:nth-child(4) {
+        height: 95%;
+        animation: growShrinkBar .5s infinite alternate cubic-bezier(0.42, 0, 0.58, 1);
+      }
+
+      &:nth-child(5) {
+        height: 75%;
+        animation: growShrinkBar .9s infinite alternate cubic-bezier(0.42, 0, 0.58, 1);
+      }
+
+      &::after {
+        content: attr(data-value);
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-bottom: 5px;
+        color: #333;
+      }
+    }
+  }
 
   .iframe {
     flex-grow: 1;
@@ -16,9 +73,25 @@
 
     transition: opacity 1s ease-in-out;
     opacity: 0;
+  }
 
-    &.loaded {
+  &.loaded {
+    &:before,
+    .barContainer {
+      display: none;
+    }
+
+    .iframe {
       opacity: 1;
     }
+  }
+}
+
+@keyframes growShrinkBar {
+  0% {
+    transform: scaleY(30%);
+  }
+  100% {
+    transform: scaleY(100%);
   }
 }
