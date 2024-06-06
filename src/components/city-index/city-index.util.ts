@@ -41,7 +41,7 @@ export class TokenDisplayData {
    */
   get liquidity(): string {
     return this.#pair.liquidity?.usd
-      ? `$${this.#pair.liquidity.usd}`
+      ? `${this.formatUsd(this.#pair.liquidity.usd)}`
       : '';
   }
 
@@ -52,7 +52,7 @@ export class TokenDisplayData {
    */
   get marketCap(): string {
     return this.#pair.fdv
-      ? `$${this.#pair.fdv}`
+      ? `${this.formatUsd(this.#pair.fdv)}`
       : '';
   }
 
@@ -91,6 +91,24 @@ export class TokenDisplayData {
     return this.#pair.info?.socials?.find(
       (social) => social.type?.toLowerCase() === 'twitter'
     )?.url ?? '';
+  }
+
+  private formatUsd(value: number): string {
+    if (!value) return '';
+
+    if (value >= 1_000_000_000) {
+      return `$${(value / 1_000_000_000).toFixed(2)}B`;
+    }
+
+    if (value >= 1_000_000) {
+      return `$${(value / 1_000_000).toFixed(2)}M`;
+    }
+
+    if (value >= 1_000) {
+      return `$${(value / 1_000).toFixed(2)}K`;
+    }
+
+    return `$${value.toFixed(2)}`;
   }
 
 }

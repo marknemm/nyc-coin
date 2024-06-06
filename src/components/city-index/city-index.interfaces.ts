@@ -104,9 +104,9 @@ export interface UseCityTokensReturn<
   error: string;
 
   /**
-   * Whether the city tokens are loading.
+   * Whether the city tokens have been loaded.
    */
-  loading: boolean;
+  loaded: boolean;
 
   /**
    * The city tokens' index data. `[]` if no tokens or an error occurred.

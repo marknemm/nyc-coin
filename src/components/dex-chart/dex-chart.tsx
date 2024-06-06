@@ -1,5 +1,6 @@
 'use client';
 
+import BarGraphLoadIndicator from '@/components/bar-graph-load-indicator/bar-graph-load-indicator';
 import clsx from 'clsx';
 import { useState } from 'react';
 import styles from './dex-chart.module.css';
@@ -17,18 +18,13 @@ export default function DexChart({
 
   return (
     <div className={clsx(
-      `${styles.dexChart} ${className} shimmer`,
-      {
-        [styles.loaded]: loaded
-      }
+      `${styles.dexChart} ${className}`,
+      { [styles.loading]: !loaded }
     )}>
-      <div className={`${styles.barContainer}`}>
-        <div className={`${styles.bar}`}></div>
-        <div className={`${styles.bar}`}></div>
-        <div className={`${styles.bar}`}></div>
-        <div className={`${styles.bar}`}></div>
-        <div className={`${styles.bar}`}></div>
-      </div>
+      <BarGraphLoadIndicator
+        loading={!loaded}
+        className={`${styles.loadingIndicator}`}
+      />
 
       <iframe
         className={`${styles.iframe}`}

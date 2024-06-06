@@ -1,13 +1,17 @@
+@import '../../app/utilities.module.css';
+
 .container {
   position: relative;
   background-color: var(--dark-background);
   text-transform: none;
-  max-height: max(calc((var(--vh, 1vh) * 100) - 5em), 800px);
+  max-height: max(calc((var(--vh, 1vh) * 100) - 4em), 800px);
   overflow-y: auto;
 }
 
 .table {
   --padding-h: 20px;
+  --image-margin-right: 20px;
+  --row-min-height: 48px;
 
   position: relative;
   width: 100%;
@@ -30,6 +34,10 @@
         > span {
           position: relative;
           vertical-align: middle;
+        }
+
+        &:not(:first-child) {
+          @apply max-md:hidden;
         }
 
         &:last-child {
@@ -63,15 +71,20 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    min-height: 50px;
-  }
+    min-height: var(--row-min-height);
 
-  .tokenImage {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-right: 20px;
+    .tokenImageContainer {
+      margin-right: var(--image-margin-right);
+    }
+
+    .tokenImageContainer,
+    .tokenImage {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: var(--dark-background-lighter);
+    }
   }
 
   .socials {
@@ -80,50 +93,51 @@
     justify-content: flex-start;
 
     & > a {
-      margin-right: 10px;
-
       &:last-child {
         margin-right: 0;
       }
     }
   }
 
-  .mobile {
-    display: none;
+  .smallTable {
+    @apply hidden max-md:block;
+    margin-top: 1em;
+
+    > tbody > tr > th {
+      padding-right: 15px;
+      color: #aaa;
+    }
+
+    .socials {
+      margin-top: 1em;
+      margin-left: -10px;
+    }
+  }
+
+  .loading {
+    .coinContent {
+      .tokenImage {
+        display: none;
+      }
+    }
+
+    .value {
+      min-width: 100px;
+      min-height: 0.5em;
+      border-radius: 10px;
+    }
+
+    .coinContent .tokenImageContainer,
+    .value {
+      @apply shimmer;
+      background-color: var(--dark-background-lighter);
+    }
+
+
   }
 
   @media only screen and (max-width: 767px) {
-    > thead,
-    > tbody {
-      > tr {
-        > th:not(:first-child),
-        > td:not(:first-child) {
-          display: none;
-        }
-      }
-    }
-
-    .coinContent {
-      min-height: 175px;
-    }
-
-    .tokenImage {
-      margin-right: 40px;
-    }
-
-    .mobile {
-      display: block;
-      margin-top: 1em;
-
-      > tbody > tr > th {
-        padding-right: 15px;
-        color: #aaa;
-      }
-
-      .socials {
-        margin-top: 1em;
-        margin-left: -10px;
-      }
-    }
+    --image-margin-right: 40px;
+    --row-min-height: 175px;
   }
 }
