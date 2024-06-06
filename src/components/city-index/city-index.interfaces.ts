@@ -1,6 +1,6 @@
 import { RefObject } from 'react';
 import type { useCityTokens } from './city-index.hooks';
-import type { TokenDisplayData } from './city-index.util';
+import type { TokenDisplayData } from './token-display-data';
 
 /**
  * API Response for Dex Screener tokens.

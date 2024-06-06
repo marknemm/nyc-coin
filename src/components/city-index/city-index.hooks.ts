@@ -1,7 +1,7 @@
 import { useLazyLoad } from '@/hooks/lazy.hooks';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import type { DexTokensApiResponse, DexTokenPair, UseCityTokensReturn } from './city-index.interfaces';
-import { TokenDisplayData } from './city-index.util';
+import type { DexTokenPair, DexTokensApiResponse, UseCityTokensReturn } from './city-index.interfaces';
+import { TokenDisplayData } from './token-display-data';
 
 /**
  * Custom hook that fetches the city tokens from the Dex Screener API.

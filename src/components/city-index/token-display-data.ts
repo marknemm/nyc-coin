@@ -34,6 +34,10 @@ export class TokenDisplayData {
     return this.#pair.info?.imageUrl ?? '';
   }
 
+  get isFeatured(): boolean {
+    return this.#pair.baseToken?.address === process.env.NEXT_PUBLIC_NYC_TA;
+  }
+
   /**
    * The token's liquidity.
    *

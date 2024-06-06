@@ -41,7 +41,8 @@ export default function CityIndex() {
           {tokens.map((token) => (
             <tr
               className={clsx({
-                [styles.loading]: !loaded
+                [styles.loading]: !loaded,
+                [styles.featured]: loaded && token.isFeatured,
               })}
               key={token.address}
             >
