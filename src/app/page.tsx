@@ -12,7 +12,7 @@ import styles from './page.module.css';
  */
 export default function HomePage() {
   return (
-    <main>
+    <main className={`${styles.page}`}>
       <section className={`${styles.section} ${styles.first}`}>
         <div className={styles.background}>
           <Image
