@@ -1,0 +1,36 @@
+.page {
+  --padding-top: 120px;
+
+  padding-top: var(--padding-top);
+  padding-bottom: 60px;
+  background-color: var(--section-yellow);
+
+  & > .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    & > img {
+      object-fit: cover;
+      object-position: center center;
+    }
+  }
+
+  @media only screen and (max-width: 991px) {
+    --padding-top: 1em;
+  }
+}
+
+.pageTitle {
+  position: relative;
+  font-size: 2em;
+  font-weight: 600;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+.table {
+  margin: 0 var(--pad-h-clamp);
+}

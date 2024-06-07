@@ -3,6 +3,8 @@
 import CopyButton from '@/components/copy-button/copy-button';
 import { useWindowSizeCategory } from '@/hooks/dimension.hooks';
 import clsx from 'clsx';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useCallback, useState } from 'react';
 import Drawer from 'react-modern-drawer';
 import 'react-modern-drawer/dist/index.css';
@@ -19,6 +21,7 @@ export default function Header() {
   const [sticky] = useStickyState();
   const [drawerOpen, setDrawerOpen] = useState(false);
   const windowSizeCategory = useWindowSizeCategory();
+  const pathname = usePathname();
 
   const closeDrawer = useCallback(() => setDrawerOpen(false), []);
   const openDrawer = useCallback(() => setDrawerOpen(true), []);
@@ -42,6 +45,26 @@ export default function Header() {
       </div>
 
       <nav className={`${styles.end}`}>
+        { pathname !== '/' && (
+          <Link
+            className={`${styles.navLink}`}
+            href="/"
+            onClick={closeDrawer}
+          >
+            Home
+          </Link>
+        )}
+
+        { pathname === '/' && (
+          <Link
+            className={`${styles.navLink}`}
+            href="/city-index"
+            onClick={closeDrawer}
+          >
+            City Index
+          </Link>
+        )}
+
         <a
           className={`${styles.navLink}`}
           href={`https://www.dextools.io/app/en/solana/pair-explorer/${process.env.NEXT_PUBLIC_TOKEN_PAIR_ID}`}

@@ -1,4 +1,4 @@
-import type { DexTokenPair } from './city-index.interfaces';
+import type { DexTokenPair } from './city-index-table.interfaces';
 import type { DeepPartial } from 'utility-types';
 
 /**

@@ -1,6 +1,6 @@
 import { useLazyLoad } from '@/hooks/lazy.hooks';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import type { DexTokenPair, DexTokensApiResponse, UseCityTokensReturn } from './city-index.interfaces';
+import type { DexTokenPair, DexTokensApiResponse, UseCityTokensReturn } from './city-index-table.interfaces';
 import { TokenDisplayData } from './token-display-data';
 
 /**

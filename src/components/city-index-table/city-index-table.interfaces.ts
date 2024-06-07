@@ -1,5 +1,5 @@
 import { RefObject } from 'react';
-import type { useCityTokens } from './city-index.hooks';
+import type { useCityTokens } from './city-index-table.hooks';
 import type { TokenDisplayData } from './token-display-data';
 
 /**

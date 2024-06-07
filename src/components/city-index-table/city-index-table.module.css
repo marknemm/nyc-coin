@@ -4,8 +4,6 @@
   position: relative;
   background-color: var(--dark-background);
   text-transform: none;
-  max-height: max(calc((var(--vh, 1vh) * 100) - 4em), 600px);
-  overflow-y: auto;
 }
 
 .table {

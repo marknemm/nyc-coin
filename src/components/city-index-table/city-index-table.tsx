@@ -3,19 +3,20 @@
 import SocialLink from '@/components/social-link/social-link';
 import clsx from 'clsx';
 import Image from 'next/image';
-import { useCityTokens } from './city-index.hooks';
-import styles from './city-index.module.css';
+import { useCityTokens } from './city-index-table.hooks';
+import styles from './city-index-table.module.css';
 
 /**
  * An index of city tokens.
  *
- * @returns The {@link CityIndex} component JSX.
+ * @param props The component properties.
+ * @returns The {@link CityIndexTable} component JSX.
  */
-export default function CityIndex() {
+export default function CityIndexTable({ className = '' }) {
   const { cityIndexRef, error, loaded, tokens } = useCityTokens();
 
   return (
-    <div className={`${styles.container}`}>
+    <div className={`${styles.container} ${className}`}>
       <table
         className={`${styles.table}`}
         ref={cityIndexRef}

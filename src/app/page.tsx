@@ -1,4 +1,3 @@
-import CityIndex from '@/components/city-index/city-index';
 import DexChart from '@/components/dex-chart/dex-chart';
 import Fade from '@/components/fade/fade';
 import JupiterTerminal from '@/components/jupiter-terminal/jupiter-terminal';
@@ -177,7 +176,7 @@ export default function HomePage() {
       <section className={`${styles.section} ${styles.sixth}`}>
         <div className={`${styles.background}`}>
           <Image
-            src="/SECTION5_BG.png"
+            src="/API_BG.png"
             alt=""
             fill
           />
@@ -205,11 +204,6 @@ export default function HomePage() {
           </Fade>
 
           <h3 className={`${styles.title}`}>
-            $City Index
-          </h3>
-          <CityIndex />
-
-          <h3 className={`${styles.title}`}>
             Get Some $NYC Bags
           </h3>
           <JupiterTerminal />
@@ -224,7 +218,7 @@ export default function HomePage() {
       <div className={`${styles.section} ${styles.seventh}`}>
         <div className={`${styles.background}`}>
           <Image
-            src="/SECTION6_BG.png"
+            src="/SECTION7_BG.png"
             alt=""
             fill
           />
