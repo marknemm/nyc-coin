@@ -3,6 +3,7 @@
   --padding-top-sticky: 5px;
   --padding-horizontal: 50px;
   --foregound: #fff;
+  --start-max-width: 45vw;
 
   position: absolute;
   box-sizing: border-box;
@@ -55,11 +56,6 @@
   display: none;
 }
 
-.start {
-  align-self: flex-start;
-  flex: 1;
-}
-
 .start > *,
 .end > .navLink {
   border-radius: 5px;
@@ -70,8 +66,15 @@
   }
 }
 
+.start {
+  align-self: flex-start;
+  flex: 1;
+  max-width: var(--start-max-width);
+}
+
 .end {
   align-self: flex-end;
+  white-space: nowrap;
 
   & > * {
     position: relative;
@@ -96,6 +99,7 @@
     --padding-top-sticky: 0;
     --padding-horizontal: 0;
     --hover-foreground: #ccc;
+    --start-max-width: 100%;
 
     position: fixed;
 

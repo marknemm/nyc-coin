@@ -10,6 +10,7 @@
   --padding-h: 20px;
   --image-margin-right: 20px;
   --row-min-height: 48px;
+  --thead-position: sticky;
 
   position: relative;
   width: 100%;
@@ -47,7 +48,7 @@
   }
 
   > thead {
-    position: sticky;
+    position: var(--thead-position);
     z-index: 1;
     top: 0;
     background-color: var(--dark-background-lighter);
@@ -141,5 +142,6 @@
   @media only screen and (max-width: 767px) {
     --image-margin-right: 40px;
     --row-min-height: 175px;
+    --thead-position: relative;
   }
 }

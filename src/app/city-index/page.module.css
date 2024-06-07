@@ -26,9 +26,10 @@
 .pageTitle {
   position: relative;
   font-size: 2em;
-  font-weight: 600;
+  font-weight: bold;
   margin-bottom: 1em;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .table {
